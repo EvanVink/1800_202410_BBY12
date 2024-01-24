@@ -1,6 +1,6 @@
 # Project Title
 
-My name is Evan, I am excited to start working on this project
+
 
 
 
@@ -10,7 +10,7 @@ This browser based web application to ...
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
-* ...
+* My name is Evan, I am excited to start working on this project
 * Owen Sweet. I am 19 years old and I like electronic music. 
 * ...
 	
