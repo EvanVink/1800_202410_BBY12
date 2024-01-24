@@ -1,6 +1,6 @@
 # Project Title
 
-My name is Evan, I am excited to start working on this project
+
 
 
 
@@ -10,9 +10,11 @@ This browser based web application to ...
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
+
 * My name is Rohan Bajaj . I am ready to explore and learn the new activities of this program.
-* ...
-* ...
+* My name is Evan, I am excited to start working on this project
+* Owen Sweet. I am 19 years old and I like pizza.
+
 	
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
