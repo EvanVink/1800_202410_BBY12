@@ -1,1 +1,15 @@
+.bg-info {
+    background-color: #32746D !important; /* Light green for secondary backgrounds */
+}
 
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+    color: #104f55; /* Dark green for brand name & nav links for visibility */
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
+
+body {
+    background-color: #9EC5AB; /* Lightest shade for body background to follow the 60% rule */
+}
