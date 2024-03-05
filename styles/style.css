@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color:#2a615c;
+    background-color: #104f55;
 }
 
 
@@ -63,7 +63,7 @@ body{
     display: grid;
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: repeat(10, 10%);
-    background-color: #104f55;
+    
 }
 
 .figure {
@@ -83,7 +83,4 @@ body{
     font-size: 30px;
 }
 
-body {
-    background-color: lightblue; 
-}
 
