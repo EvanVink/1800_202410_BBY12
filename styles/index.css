@@ -62,17 +62,23 @@ body{
 .welcomeG {
     display: grid;
     grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(20, 10%);
+    grid-template-rows: repeat(60, 10%);
     
 }
 
 
 
+.nav-link{
+    color: black;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
 
 
 
-
-.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+.navbar-light .navbar-brand, .navbar-light .navbar-nav {
     color: #104f55; /* Dark green for brand name & nav links for visibility */
     font-family: "Inria Sans", sans-serif;
     font-weight: 700;
@@ -158,4 +164,49 @@ body{
     transform: rotate(-135deg);
 }
 
+
+
+
+
+#topTag{
+    grid-row: 22;
+    grid-column: 2/10;
+    color: black;
+}
+
+#maptxt{
+    grid-column: 3/5;
+    grid-row: 23/25;
+    text-align: center;
+    color: black;
+}
+.Map{
+    background: url('/images/eu_van_1.jpg') center center;
+    background-size: cover;
+    grid-column: 2/6;
+    grid-row: 25/37;
+    margin-left: 5%;
+}
+
+.News{
+    background: url('/images/news.jpg') center center;
+    background-size: cover;
+    grid-column: 6/10;
+    grid-row: 25/37;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.Newstxt{
+    grid-column: 7/9;
+    grid-row: 23/25;
+    text-align: center;
+
+}
+
+#bottomhr{
+    grid-column: 2/10;
+    grid-row: 40;
+    color: black;
+}
 
