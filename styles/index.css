@@ -20,7 +20,7 @@ body{
 .jumbotron {
     color:black;
     grid-column: 1/7;
-    grid-row: 4/8;
+    grid-row: 3/7;
     margin-top: 2%;
     margin-left: 30px;
 }
@@ -40,14 +40,14 @@ body{
 
 .button1s{
     grid-column: 1/5;
-    grid-row: 8/10;
+    grid-row: 11/13;
     margin-left: 30px;
     margin-top: 10px;
 }
 
 .buttonG{
     grid-column: 2/6;
-    grid-row: 8/10;
+    grid-row: 11/13;
     margin-left: 30px;
     margin-top: 10px;
 }
@@ -62,14 +62,11 @@ body{
 .welcomeG {
     display: grid;
     grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(10, 10%);
+    grid-template-rows: repeat(20, 10%);
     
 }
 
-.figure {
-    grid-column: 6/10;
-    grid-row: 3/9;
-}
+
 
 
 
@@ -84,3 +81,9 @@ body{
 }
 
 
+#backphoto{
+    background: url('/images/vanbanner.jpg') center center;
+    background-size: cover;
+    grid-column: 1/11;
+    grid-row: 1/21;
+}
