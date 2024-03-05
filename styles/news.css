@@ -1,0 +1,23 @@
+.content {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(60, 10%);
+    
+}
+
+.searchbar {
+    grid-column: 2/ span 8;
+    grid-row: 3/4;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+    color: #104f55; /* Dark green for brand name & nav links for visibility */
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.bg-info {
+    background-color: #32746D !important; /* Light green for secondary backgrounds */
+}
