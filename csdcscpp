@@ -1,0 +1,175 @@
+[33mcommit 220fa2ee8078794063c3f3ab6ea34c225f0dbddc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Owen Sweet <o.sweet.work@gmail.com>
+Date:   Mon Mar 4 14:54:51 2024 -0800
+
+    changed colors of login page and added a back button
+
+[33mcommit c5e5cf4d85109d26d243156e2a85e83b7fbdbf37[m
+Merge: 6e82823 f189806
+Author: Owen Sweet <o.sweet.work@gmail.com>
+Date:   Mon Mar 4 12:38:15 2024 -0800
+
+    Merge branch 'main' of https://github.com/EvanVink/1800_202410_BBY12
+
+[33mcommit 6e82823615c7e9c5f1c1318c9478c6deeadb4a11[m
+Author: Owen Sweet <o.sweet.work@gmail.com>
+Date:   Mon Mar 4 12:37:45 2024 -0800
+
+    added login page with firebase authentication
+
+[33mcommit f1898069c4d5c672f358e6ddf3deab0fd2906f4e[m
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Wed Feb 21 10:01:15 2024 -0800
+
+    added main and login page
+
+[33mcommit 9f5d6dd165de7d223595a9b53ab6fc6097b8096a[m
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Thu Feb 15 16:24:07 2024 -0800
+
+    moving the buttons
+
+[33mcommit 942b00308a654af5acd980dce2ef6149f81434e0[m
+Merge: 3abbe99 5f076df
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Thu Feb 15 15:31:42 2024 -0800
+
+    Merge branch 'main' of https://github.com/EvanVink/1800_202410_BBY12
+
+[33mcommit 3abbe994aa29ec6cb23ce5cd49911920eb52ea44[m
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Thu Feb 15 15:31:35 2024 -0800
+
+    changed the welcome banner
+
+[33mcommit 5f076dfdb2f1aa73ce94ad9dd6fbed807f516db7[m
+Author: rohan bajaj <bajajrohan201@gmail.com>
+Date:   Thu Feb 15 13:49:21 2024 -0800
+
+    changed the icons
+
+[33mcommit 49fc926e3bcc8e823398b61b6f8261c4690c060e[m
+Merge: c87ab1f e421f94
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Thu Feb 15 11:27:38 2024 -0800
+
+    Merge branch 'main' of https://github.com/EvanVink/1800_202410_BBY12
+
+[33mcommit c87ab1fd3260ec266521d4cb4600408ff8ccb94c[m
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Thu Feb 15 11:27:31 2024 -0800
+
+    update
+
+[33mcommit e421f948adcad0985d8f6b77cb00787a5b73606b[m
+Author: rohan bajaj <bajajrohan201@gmail.com>
+Date:   Thu Feb 15 11:15:58 2024 -0800
+
+    added footer with icons
+
+[33mcommit 377560ffb35e8a2d8ef4f3719927798df975e16d[m
+Merge: bcbe7ab 3afe151
+Author: rohan bajaj <bajajrohan201@gmail.com>
+Date:   Thu Feb 15 11:09:31 2024 -0800
+
+    Merge branch 'main' of https://github.com/EvanVink/1800_202410_BBY12
+
+[33mcommit bcbe7ab86e89a8507920b5aaebf6b29f40e77b23[m
+Author: rohan bajaj <bajajrohan201@gmail.com>
+Date:   Thu Feb 15 11:09:23 2024 -0800
+
+    test
+
+[33mcommit 3afe151acbbdafd645a9a99c6ce98f7fec146a7c[m
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Thu Feb 15 11:04:42 2024 -0800
+
+    removed a duplicate link to css file
+
+[33mcommit 4afb128793c2cea701fa4c76c79f6b5704f877f0[m
+Merge: 707c876 50e5ca9
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Thu Feb 15 11:01:45 2024 -0800
+
+    added the welcome banner with an image
+
+[33mcommit 707c8768504717dd4de437fb4eda095291b77462[m
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Thu Feb 15 10:17:43 2024 -0800
+
+    test
+
+[33mcommit 50e5ca9d8fe2887796c8e1270c206dd47dcd7b7e[m
+Author: Owen Sweet <o.sweet.work@gmail.com>
+Date:   Thu Feb 15 10:13:19 2024 -0800
+
+    added navbar with styling
+
+[33mcommit 3951a5253c802c4c60d50f976e6769267faf2c4b[m
+Author: Owen Sweet <o.sweet.work@gmail.com>
+Date:   Thu Feb 15 10:02:28 2024 -0800
+
+    added bootstrap libraries
+
+[33mcommit 6a8a64b8610d53625924b19a26b07f1f6e85849a[m
+Merge: edf6233 7b905a2
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Wed Jan 24 09:45:41 2024 -0800
+
+    Merge branch 'main' of https://github.com/EvanVink/1800_202410_BBY12
+
+[33mcommit edf6233df81455f4bb7d717c3c4b8bd83417dc42[m
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Wed Jan 24 09:45:31 2024 -0800
+
+    x
+
+[33mcommit 7b905a2143d92ec277c2e7ed38595d467558cb6f[m
+Merge: f30bf5c 7ed89a0
+Author: rohan bajaj <bajajrohan201@gmail.com>
+Date:   Wed Jan 24 09:40:02 2024 -0800
+
+    Added one line intro to README file for Rohan
+
+[33mcommit f30bf5c27ea630cebd50323a5b9a9ad2f6fbf4cc[m
+Author: rohan bajaj <bajajrohan201@gmail.com>
+Date:   Wed Jan 24 09:31:39 2024 -0800
+
+    Added one line intro to README file for Rohan
+
+[33mcommit 7ed89a04465c97907187cbe6285300ee64ad0ae0[m
+Author: Owen Sweet <o.sweet.work@gmail.com>
+Date:   Wed Jan 24 09:30:39 2024 -0800
+
+    changed my line to say i like pizza
+
+[33mcommit dce0a1f5cc77b7f0b66427f2924f4114306840bd[m
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Wed Jan 24 09:22:53 2024 -0800
+
+    moved my single line
+
+[33mcommit e18ac6137eed02fd8891f2762918662e55bda65f[m
+Merge: 9c0d673 b9d2749
+Author: Owen Sweet <o.sweet.work@gmail.com>
+Date:   Wed Jan 24 09:19:27 2024 -0800
+
+    Merge branch 'main' of https://github.com/EvanVink/1800_202410_BBY12
+
+[33mcommit 9c0d673a39952d50399fc29c014b92805b9265cd[m
+Author: Owen Sweet <o.sweet.work@gmail.com>
+Date:   Wed Jan 24 09:16:57 2024 -0800
+
+    Added my name and description
+
+[33mcommit b9d2749115866451ab3bbace1f30f4907f546c9b[m
+Author: Evan Vink <evink2@my.bcit.ca>
+Date:   Wed Jan 24 09:12:58 2024 -0800
+
+    added one line intro to README file for Evan
+
+[33mcommit da188b089085a67ce0e872c91b0f9295dc49aa0c[m
+Author: EvanVink <156744141+EvanVink@users.noreply.github.com>
+Date:   Wed Jan 24 09:05:32 2024 -0800
+
+    Initial commit
