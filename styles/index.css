@@ -207,7 +207,7 @@ body{
     grid-column: 7/9;
     grid-row: 23/25;
     text-align: center;
-
+    color: black;
 }
 
 #bottomhr{

@@ -36,27 +36,41 @@
     <!-- Your HTML Layout go here -->
     <!------------------------------>
     <!-- Stuff for body goes here -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <nav class="navbar navbar-light bg-info">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/main.html">
                 <img src="./images/809999-200.png" height="55">
                 VanCrimeWatch
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler collapsed d-flex flex-column justify-content-around" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Search locations</a>
                     </li>
+                    <form class="d-flex" id="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </form>
+                    <li>
+                        <a class="nav-link" href="#">Witness Form</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Map</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/settings.html">Settings</a>
+                    </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-dark" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
