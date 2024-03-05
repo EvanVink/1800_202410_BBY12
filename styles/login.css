@@ -1,10 +1,10 @@
 .buttoncontainer {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(5, 20%);
 }
 
 .btn-primary {
-    grid-column: 2/3;
+    grid-column: 3/4;
     background-color: #32746D;
     color: black;
 }
