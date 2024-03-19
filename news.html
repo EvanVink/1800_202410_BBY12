@@ -61,12 +61,7 @@
                     <li>
                         <a class="nav-link" href="#">Witness Form</a>
                     </li>
-                    <li>
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Map</a>
-                    </li>
+                    
                     <li>
                         <a class="nav-link" href="/settings.html">Settings</a>
                     </li>
@@ -78,54 +73,66 @@
     <div class="content">
         
         <div class="searchbar">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Search News</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <br>
-                    <p>Nearby News 
-                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btncheck1"></label>
-                    </p>
-                  </li>
-                  <li class="nav-item">
-                    <p>City News 
-                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btncheck2"></label>
-                    </p>
-                  </li>
-                  <li class="nav-item">
-                    <p>Major News 
-                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                        <label class="btn btn-outline-dark" for="btncheck3"></label>
-                    </p>
-                  </li>
-                </ul>
-                
-              </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark btn-light" type="submit">Search</button>
+                <button type="button" class="btn btn-dark">Filters</button>
+              </form>
+        </div>
+
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-dark custom-outline" for="btnradio1">Nearby News</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-dark custom-outline" for="btnradio2">Country News</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-dark custom-outline" for="btnradio3">Global News</label>
+          </div>
+
+          <hr id="newsLine">
+
+
+
+          <div class="cardcontent">
+          <div class="card" style="width: 25%; aspect-ratio: 3/4;">
+            <img src="https://static.foxnews.com/foxnews.com/content/uploads/2021/09/Crime-scene.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Local man gets attacked on a street corner, he says he never saw it coming.</p>
             </div>
-          </nav>
+          </div>
+          <div class="card" style="width: 25%; aspect-ratio: 3/4;">
+            <img src="https://static.foxnews.com/foxnews.com/content/uploads/2021/09/Crime-scene.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Local man gets attacked on a street corner, he says he never saw it coming.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 25%; aspect-ratio: 3/4;">
+            <img src="https://static.foxnews.com/foxnews.com/content/uploads/2021/09/Crime-scene.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Local man gets attacked on a street corner, he says he never saw it coming.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 25%; aspect-ratio: 3/4;">
+            <img src="https://static.foxnews.com/foxnews.com/content/uploads/2021/09/Crime-scene.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Local man gets attacked on a street corner, he says he never saw it coming.</p>
+            </div>
+          </div>
           </div>
     </div>
 
 
 
-        <footer class="navbar bg-info fixed-bottom">
-		    <div class="container">
-                <span class="material-icons">location_on</span>
-				<span class="material-icons">newspaper</span>
-				<span class="material-icons">groups</span>
-            
-		    </div>
-        </footer>
+    <footer class="navbar bg-info fixed-bottom">
+        <div class="container">
+            <span class="material-icons" id="map-button">location_on</span>
+            <span class="material-icons" id="news-button">newspaper</span>
+            <span class="material-icons" id="social-button">groups</span>
+        
+        </div>
+    </footer>
+        <script src="./scripts/client.js"></script>
     </body>
 </html>

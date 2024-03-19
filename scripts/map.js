@@ -5,6 +5,10 @@
 // Initialize and add the map
 let map;
 
+function writeYears() {
+  
+}
+
 
 async function initMap() {
   const Markers = [
