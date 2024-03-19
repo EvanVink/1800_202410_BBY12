@@ -139,18 +139,20 @@ async function initMap() {
     title: "Uluru",
   });
 
-  // Markers.forEach(m => {
-  //   const markers = new AdvancedMarkerElement({
-  //     position: { lat: m.X, lgn: m.Y },
-  //     map: map
-  //   })
-  // })
-  for (i = 0; i < Markers.length; i++) {  
+ 
+
+  Markers.forEach(m => {
     const markers = new AdvancedMarkerElement({
-      position: { lat: Markers[i][9], lgn: Markers[i][10]},
-      map: map
+      map: map,
+      position: { lat: m.X, lng: m.Y },
     });
-  }
+  })
+  // for (i = 0; i < Markers.length; i++) {  
+  //   const markers = new AdvancedMarkerElement({
+  //     position: { lat: Markers[i][9], lgn: Markers[i][10]},
+  //     map: map
+  //   });
+  // }
 }
 
 
