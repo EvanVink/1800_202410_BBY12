@@ -1,12 +1,54 @@
 
-
-
-
 // Initialize and add the map
 let map;
 
-function writeYears() {
-  
+const firebaseConfig = {
+  apiKey: "AIzaSyDL7dJYa3STvWHdN_9PRSPwed8W2r9OnHk",
+  authDomain: "fir-8aefb.firebaseapp.com",
+  projectId: "fir-8aefb",
+  storageBucket: "fir-8aefb.appspot.com",
+  messagingSenderId: "509307017348",
+  appId: "1:509307017348:web:8f4f57d1c3b061738acad1",
+  measurementId: "G-0FY8RSRVQQ"
+};
+
+//--------------------------------------------
+// initialize the Firebase app
+// initialize Firestore database if using it
+//--------------------------------------------
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const storage = firebase.storage();
+
+
+async function uploadCsv() {
+  const csvData = await fetch('./crimeData/crimedata.csv')
+    .then(response => response.text());
+
+  const rows = csvData.split('\n');
+  const headers = rows[0].split(',');
+  for (let i = 1; i < rows.length; i++) {
+    const cells = rows[i].split(',');
+    const crimeData = {};
+    for (let j = 0; j < headers.length; j++) {
+      crimeData[headers[j]] = cells[j];
+    }
+    await addCrimeToFirestore(crimeData);
+  }
+  console.log('CSV data uploaded to Firestore.');
+}
+
+async function addCrimeToFirestore(crimeData) {
+  const { YEAR } = crimeData;
+  const crimedataRef = db.collection('crimedata');
+  const yearDocRef = crimedataRef.doc(YEAR.toString());
+  // Check if year document exists, if not, create it
+  await yearDocRef.set({}, { merge: true });
+  const yearCollectionRef = yearDocRef.collection('crimes');
+  const querySnapshot = await yearCollectionRef.get();
+  const crimeCount = querySnapshot.size; // Number of existing crimes
+  await yearCollectionRef.doc(`crime${crimeCount + 1}`).set(crimeData);
+  console.log(`Crime added for year ${YEAR} - crime${crimeCount + 1}`);
 }
 
 
@@ -122,8 +164,8 @@ async function initMap() {
     }
   ]
   
-  // The location of Uluru
-  const position1 = { lat: 49.2827, lng: -123.1207 };
+  // The location of vancouver
+  const defaultLocation = { lat: 49.2827, lng: -123.1207 };
   // Request needed libraries.
   //@ts-ignore
   const { Map } = await google.maps.importLibrary("maps");
@@ -132,14 +174,14 @@ async function initMap() {
   // The map, centered at Uluru
   map = new Map(document.getElementById("map"), {
     zoom: 11,
-    center: position1,
+    center: defaultLocation,
     mapId: "DEMO_MAP_ID",
   });
 
   // The marker, positioned at Uluru
   const marker = new AdvancedMarkerElement({
     map: map,
-    position: position1,
+    position: defaultLocation,
     title: "Uluru",
   });
 
@@ -151,12 +193,49 @@ async function initMap() {
       position: { lat: m.X, lng: m.Y },
     });
   })
-  // for (i = 0; i < Markers.length; i++) {  
-  //   const markers = new AdvancedMarkerElement({
-  //     position: { lat: Markers[i][9], lgn: Markers[i][10]},
-  //     map: map
-  //   });
-  // }
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      const userPosition = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      const userMarker = new google.maps.Marker({
+        position: userPosition,
+        map: map,
+        title: 'Your Location',
+        icon: {
+          url: './images/pointer.png',
+          size: new google.maps.Size(50, 50),
+          scaledSize: new google.maps.Size(50, 50),
+          anchor: new google.maps.Point(25, 25)
+        }
+      });
+
+      map.setCenter(userPosition);
+      navigator.geolocation.watchPosition(updateMarkerRotation);
+
+    }, function() {
+      alert('Error: The Geolocation service failed.');
+    });
+  } else {
+    alert('Error: Your browser doesn\'t support geolocation.');
+  }
+
+}
+
+function updateMarkerRotation(position) {
+  // Calculate the movement direction based on the change in coordinates
+  if (position.coords.speed > 0) {
+      console.log('You are moving!');
+      const heading = position.coords.heading; // Get the direction of movement in degrees
+      // Update marker icon with rotation
+      marker.setIcon({
+          url: 'path/to/your/marker.png', // Path to your marker icon
+          scaledSize: new google.maps.Size(32, 32), // Set the size of the icon
+          rotation: heading, // Set rotation angle to movement direction
+      });
+  }
 }
 
 

@@ -2,14 +2,14 @@
 //  Your web app's Firebase configuration
 //----------------------------------------
 const firebaseConfig = {
-    apiKey: "AIzaSyDL7dJYa3STvWHdN_9PRSPwed8W2r9OnHk",
-    authDomain: "fir-8aefb.firebaseapp.com",
-    projectId: "fir-8aefb",
-    storageBucket: "fir-8aefb.appspot.com",
-    messagingSenderId: "509307017348",
-    appId: "1:509307017348:web:8f4f57d1c3b061738acad1",
-    measurementId: "G-0FY8RSRVQQ"
-  };
+  apiKey: "AIzaSyCnd9jkvWAGMEom5lrfV7LycdfNVL9uKeQ",
+  authDomain: "crimewatch-fa960.firebaseapp.com",
+  projectId: "crimewatch-fa960",
+  storageBucket: "crimewatch-fa960.appspot.com",
+  messagingSenderId: "71159774002",
+  appId: "1:71159774002:web:8b2636e8c981a615b4752b",
+  measurementId: "G-FH07RQT6FN"
+};
 
 //--------------------------------------------
 // initialize the Firebase app

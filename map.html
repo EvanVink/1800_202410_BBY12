@@ -20,12 +20,19 @@
     <!-- Other libraries go here -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script> 
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="./styles/map.css">
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-    <script type="module" src="./scripts/map.js"></script>
+    
     
 
 </head>
@@ -80,6 +87,9 @@
 
     <div class="mapcontainer">
         <div id="map"></div>
+        <div class="sosbutton">
+            <img src="https://cdn1.vectorstock.com/i/1000x1000/26/00/sos-icon-emergency-alarm-button-sign-symbol-vector-34572600.jpg">
+        </div>
     </div>
 
     <footer class="navbar bg-info fixed-bottom">
@@ -100,6 +110,8 @@
             ({key: "AIzaSyD75aF2yLPdVoJhu444Qe-xYBuXg7lDA3c", v: "weekly"});
         </script>
         <script src="./scripts/client.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script src="./scripts/map.js"></script>
         
        
 </body>

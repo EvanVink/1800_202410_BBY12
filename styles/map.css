@@ -1,10 +1,16 @@
 #map {
     height: 550px;
+    grid-row: 1/ span 10;
+    grid-column: 1/ span 20;
 }
 
 .mapcontainer {
     height: 100%;
-    padding: 10%;
+    margin: 10%;
+    display: grid;
+    grid-template-rows: repeat(10, 10%);
+    grid-template-columns: repeat(20, 5%);
+    position: relative;
 
 }
 
@@ -85,3 +91,33 @@
     transform: rotate(-135deg);
 }
 
+.sosbutton {
+    
+    display: flex;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid white;
+    color: white;
+    overflow: hidden;
+    border-radius: 12px;
+    max-width: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    position: absolute;
+    top: 60px; /* Adjust as needed for vertical position */
+    right: 12px; /* Adjust as needed for horizontal position */
+    z-index: 1000; /* Ensure the button stays on top of the map */
+    
+
+}
+
+.sosbutton img {
+    margin-top: 5px;
+    width: 150%;
+    height: 160%;
+    z-index: 101;
+    max-width: 60px;
+}
