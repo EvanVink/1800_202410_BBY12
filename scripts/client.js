@@ -1,3 +1,37 @@
+const staticNewsData = {
+    'nearby': [
+        {
+            title: 'Local Park Renovation Begins Next Week',
+            description: 'The city announced a new initiative to renovate Central Park...',
+            url: '#',
+            img: '<img src= https://vancouver.ca/images/cov/feature/renovation-restoration-landing.jpg>'
+        },
+        // Add more items as needed
+    ],
+    'country': [
+        {
+            title: 'National Education Reform Plans Revealed',
+            description: 'In a recent press conference, the education minister outlined plans for...',
+            url: '#',
+            img: '<img src= https://i.cbc.ca/1.6813619.1681772594!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_780/tdsb-school-open-blacksmith-public-school.jpg alt="Education Reform Image">'
+        },
+        // Add more items as needed
+    ],
+    'global': [
+        {
+            title: 'Global Climate Summit 2024 Concludes',
+            description: 'The annual Global Climate Summit concluded yesterday with several key agreements...',
+            url: '#',
+            img: '<img src= https://thetourisminternational.com/wp-content/uploads/2024/01/7332fb26-attachment-image-1jpeg-12882-3gcw9o-1024x768-1-768x576.jpeg alt="Climate Summit Image">'
+        },
+        // Add more items as needed
+    ]
+};
+
+
+
+
+
 document.getElementById('map-button').addEventListener('click', function() {
     window.location.href = "map.html";
 });
@@ -48,5 +82,43 @@ async function fetchCrimeNews() {
 
 // Call the function when the page loads or when needed
 fetchCrimeNews();
+
+function displayNewsByCategory(category) {
+    const newsContainer = document.querySelector('.cardcontent');
+    newsContainer.innerHTML = ''; // Clear existing content
+
+    const newsItems = staticNewsData[category]; // Get news items by category
+
+    newsItems.forEach((article) => {
+        const imageUrl = new DOMParser().parseFromString(article.img, 'text/html').body.querySelector('img').src;
+        const newsCard = `
+            <div class="card" style="width: 25%; aspect-ratio: 3/4;">
+                <img src="${imageUrl}" class="card-img-top" alt="${article.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${article.title}</h5>
+                    <p class="card-text">${article.description}</p>
+                    <a href="${article.url}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        `;
+        newsContainer.innerHTML += newsCard; // Add the card to the container
+    });
+}
+
+document.getElementById('nearbyNewsBtn').addEventListener('click', function() {
+    displayNewsByCategory('nearby');
+});
+
+document.getElementById('countryNewsBtn').addEventListener('click', function() {
+    displayNewsByCategory('country');
+});
+
+document.getElementById('globalNewsBtn').addEventListener('click', function() {
+    displayNewsByCategory('global');
+});
+
+
+
+
 
   

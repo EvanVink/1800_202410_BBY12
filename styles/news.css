@@ -130,3 +130,91 @@
     width: 100%;
 }
 
+/* General button styles */
+.btn {
+    background-color: #ffffff; /* White background */
+    color: #007bff; /* Blue text - match this with your theme */
+    border: 2px solid #007bff; /* Blue border - match this with your theme */
+    margin: 0 10px; /* Adds some space between buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    text-align: center; /* Center text inside buttons */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Allows setting padding and margins */
+    font-size: 16px; /* Set the font-size as per your design */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Hover and focus styles for buttons */
+.btn:hover, .btn:focus {
+    color: #ffffff; /* White text on hover/focus */
+    background-color: #007bff; /* Blue background on hover/focus */
+    border-color: #0056b3; /* Slightly darker border on hover/focus for a bit of depth */
+    text-decoration: none; /* Ensures text is not underlined on hover/focus */
+}
+
+/* Button group style */
+.btn-group {
+    text-align: center; /* Center align the button group */
+    display: block; /* Set the group to take full width */
+    margin: 10px 0; /* Spacing above and below the button group */
+}
+
+/* Ensure the button is not wrapping or overflowing */
+.btn-group .btn {
+    white-space: nowrap; /* Keeps text on one line */
+    overflow: hidden; /* Prevents content from overflowing */
+    text-overflow: ellipsis; /* Adds an ellipsis to overflowing text */
+}
+
+/* Add or adjust these styles in your news.css */
+
+.btn {
+    
+    padding: 0.375rem 0.75rem; /* Adjust padding to ensure text fits within the button */
+    font-size: 1rem; /* Ensure the font size is appropriate for the button size */
+    line-height: 1.0; /* Good for text alignment */
+    border-radius: 0.25rem; /* Optional: Rounds the corners of the buttons */
+    display: inline-block; /* Ensures the buttons are laid out inline and are properly boxed */
+    width: auto; /* Ensures the width of the buttons adjusts based on their content */
+    overflow: hidden; /* Prevents text from spilling out */
+    text-overflow: ellipsis; /* Adds an ellipsis for overflowing text */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+}
+
+.card img {
+    width: 100%; /* Makes the image take up 100% of the card width */
+    height: 33%; /* Adjusts the height automatically to maintain aspect ratio */
+    object-fit: cover; /* Covers the area of the card without breaking the aspect ratio */
+}
+
+.card {
+    
+    flex:  1 calc(25% - 20px); /* Adjust the flex-basis to account for the gap and ensure 4 cards per row */
+    display: flex; /* Use flex display for card */
+    flex-direction: column; /* Stack the image and card body on top of each other */
+    align-items: stretch; /* Stretch items to fill the width of the card */
+}
+
+/* Ensures that the button group doesn't stretch the buttons too much */
+.btn-group {
+    justify-content: center; /* Centers the buttons in the group */
+}
+
+
+.btn {
+    /* ... other properties ... */
+    min-width: 90px; /* Adjust as needed to fit your design */
+    /* ... other properties ... */
+}
+
+
+.btn {
+    /* Existing styles */
+    margin: 0 10px 5px; /* Adjust the bottom margin as needed, reduced from unspecified to 5px */
+    /* Other styles */
+}
+
+
+
