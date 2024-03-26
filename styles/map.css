@@ -1,5 +1,9 @@
+#map-button, #news-button, #social-button {
+    cursor: pointer;
+}
+
 #map {
-    height: 780px;
+    height: 670px;
     grid-row: 1/ span 10;
     grid-column: 1/ span 20;
 }

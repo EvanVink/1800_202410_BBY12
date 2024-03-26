@@ -218,12 +218,7 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
 
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: defaultLocation,
-    title: "Uluru",
-  });
+ 
 
   let breakAndEnter = {
     url: "/images/3395132-200.png",
@@ -298,7 +293,7 @@ async function initMap() {
   let countBreak1 = 0; //counter
   let markerArray1 = []; //Array
   
-  document.getElementById("but1").addEventListener("click", function myFunction1() {
+  document.getElementById("but1").querySelector('.toggle').addEventListener("click", function myFunction1() {
       // calling the function to clear the markers
       clearMarkers1();
   
@@ -308,7 +303,7 @@ async function initMap() {
               let markers1 = new google.maps.Marker({
                   map: map,
                   position: { lat: m.X, lng: m.Y },
-                  icon: breakAndEnter,
+                  icon: breakAndEnter
               });
   
               // Toggle visibility of marker based on countBreak
@@ -339,7 +334,7 @@ async function initMap() {
   let countBreak2 = 0; 
   let markerArray2 = []; 
   
-  document.getElementById("but2").addEventListener("click", function myFunction2() {
+  document.getElementById("but2").querySelector('.toggle').addEventListener("click", function myFunction2() {
       // calling the function to clear the markers
       clearMarkers2();
   
@@ -383,7 +378,7 @@ async function initMap() {
   let countBreak4 = 0; 
   let markerArray4 = []; 
   
-  document.getElementById("but4").addEventListener("click", function myFunction4() {
+  document.getElementById("but4").querySelector('.toggle').addEventListener("click", function myFunction4() {
       // calling the function to clear the markers
       clearMarkers4();
   
@@ -429,7 +424,7 @@ async function initMap() {
   let countBreak5 = 0; 
   let markerArray5 = []; 
   
-  document.getElementById("but5").addEventListener("click", function myFunction5() {
+  document.getElementById("but5").querySelector('.toggle').addEventListener("click", function myFunction5() {
       // calling the function to clear the markers
       clearMarkers5();
   

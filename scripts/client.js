@@ -31,7 +31,6 @@ const staticNewsData = {
 
 
 
-
 document.getElementById('map-button').addEventListener('click', function() {
     window.location.href = "map.html";
 });
@@ -43,6 +42,7 @@ document.getElementById('news-button').addEventListener('click', function() {
 document.getElementById('social-button').addEventListener('click', function() {
     window.location.href = "socials.html";
 });
+
 
 async function fetchCrimeNews() {
     const apiKey = '7c951c50378b4a5bb0bc3697cfec39e5'; // Replace with your actual API key
