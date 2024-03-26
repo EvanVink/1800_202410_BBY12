@@ -1,7 +1,7 @@
 
 // Initialize and add the map
 let map;
-
+let marker = [];
 const firebaseConfig = {
   apiKey: "AIzaSyDL7dJYa3STvWHdN_9PRSPwed8W2r9OnHk",
   authDomain: "fir-8aefb.firebaseapp.com",
@@ -53,7 +53,7 @@ async function addCrimeToFirestore(crimeData) {
 
 
 async function initMap() {
-  const Markers = [
+  let Markers = [
     {
       TYPE: "Break and Enter Commercial",
       YEAR: 2024,
@@ -161,6 +161,42 @@ async function initMap() {
       place: "Central Business District",
       X: 49.27322235,
       Y: -123.1162268
+    },
+    {
+      TYPE: "Mischief",
+      YEAR: 2024,
+      MONTH: 1,
+      DAY: 23,
+      HOUR: 4,
+      MINUTE: 28,
+      HUNDRED_BLOCK: "16XX NAPIER ST",
+      place: "Grandview-Woodland",
+      X: 49.274906644241355,
+      Y: -123.0697940868212
+    },
+    {
+      TYPE: "Other Theft",
+      YEAR: 2024,
+      MONTH: 1,
+      DAY: 1,
+      HOUR: 19,
+      MINUTE: 6,
+      HUNDRED_BLOCK: "6XX W BROADWAY AVE",
+      place: "Fairview",
+      X: 49.26329274189404,
+      Y: -123.1175903250156
+    },
+    {
+      TYPE: "Vehicle Collision or Pedestrian Struck (with Injury)",
+      YEAR: 2024,
+      MONTH: 1,
+      DAY: 15,
+      HOUR: 23,
+      MINUTE: 21,
+      HUNDRED_BLOCK: "YUKON ST / W 16TH AVE",
+      place: "Riley Park",
+      X: 49.25681960822756,
+      Y: -123.11318516438216
     }
   ]
   
@@ -185,14 +221,167 @@ async function initMap() {
     title: "Uluru",
   });
 
+  let breakAndEnter = {
+    url: "/images/3395132-200.png",
+    scaledSize: new google.maps.Size(35, 35)
+  }
+
+  const Mischief = {
+    url: "/images/327670-200.png",
+    scaledSize: new google.maps.Size(35, 35)
+  }
+
+  let Theft = {
+    url: "/images/854355-200.png",
+    scaledSize: new google.maps.Size(35, 35)
+  }
+
+  const Crash = {
+    url: "/images/png-transparent-auto-beauty-specialists-car-traffic-collision-computer-icons-car-angle-car-accident-thumbnail.png",
+    scaledSize: new google.maps.Size(35, 35)
+  }
+  let countBreak = true;
+
+  
+  // document.getElementById("but1").addEventListener("click", function Break(){
+
+  //   if ((countBreak % 2) == 0) {
+  //     Markers.forEach(m => {
+  //         if (m.TYPE == "Break and Enter Commercial") {
+  //             markers1 = new google.maps.Marker({
+  //                 map: map,
+  //                 position: { lat: m.X, lng: m.Y },
+  //                 icon: breakAndEnter,
+  //             });
+  //         }
+  //     });
+  // } else {
+  //     Markers.forEach(marker => {
+  //         marker.setMap(null); // Remove the marker from the map
+  //     });
+  // }
+    // if ((countBreak % 2) == 0){
+    //   Markers.forEach(m => {
+
+
+    //     if(m.TYPE == "Break and Enter Commercial"){
+    //       let markers1 = new google.maps.Marker({
+    //         map: map,
+    //         position: { lat: m.X, lng: m.Y },
+    //         icon: breakAndEnter,
+    //       });
+          
+    //     }
+  
+        
+    //   })
+    // } else {
+    //   Markers.forEach(marker => {
+    //     marker.setMap(null); // Remove the marker from the map
+    // });
+        
+        // Markers.setVisible(false); // Remove the marker from the map
+    
+    
+    
+  //   countBreak++;
+  //   console.log(countBreak);
+
+
+      
+  // });
+  
+  Markers.forEach(m => {
+    
+    
+    
+
+ 
+    if(m.TYPE == "Break and Enter Commercial"){
+      let markers1 = new google.maps.Marker({
+        map: map,
+        position: { lat: m.X, lng: m.Y },
+        icon: breakAndEnter,
+      });
+      
+    }
+    marker.push(markers1);
+    function setMapOn1(map) {
+      for (let i = 0; i < marker.length; i++) {
+        marker[i].setMap(map);
+      }
+    }
+
+    document.getElementById("but1").addEventListener("click", function Break(){
+      if(countBreak == false){
+        setMapOn1(null);
+      } else {
+        setMapOn1(map);
+      }
+
+    })
+  })
  
 
   Markers.forEach(m => {
-    const markers = new AdvancedMarkerElement({
-      map: map,
-      position: { lat: m.X, lng: m.Y },
-    });
+    
+    
+    
+
+ 
+    // if(m.TYPE == "Break and Enter Commercial"){
+    //   let markers1 = new google.maps.Marker({
+    //     map: map,
+    //     position: { lat: m.X, lng: m.Y },
+    //     icon: breakAndEnter,
+    //   });
+    //   marker.push(markers1);
+    // }
+    // function setMapOn1(map) {
+    //   for (let i = 0; i < marker.length; i++) {
+    //     marker[i].setMap(map);
+    //   }
+    // }
+
+    // document.getElementById("but1").addEventListener("click", function Break(){
+    //   if(countBreak == false){
+    //     setMapOn1(null);
+    //   } else {
+    //     setMapOn1(map);
+    //   }
+
+    // })
+    
+
+    if(m.TYPE == "Mischief"){
+      const markers2 = new google.maps.Marker({
+        map: map,
+        position: { lat: m.X, lng: m.Y },
+        icon: Mischief,
+      });
+    }
+
+    if(m.TYPE == "Other Theft"){
+      const markers3 = new google.maps.Marker({
+        map: map,
+        position: { lat: m.X, lng: m.Y },
+        icon: Theft,
+      });
+    }
+
+    if(m.TYPE == "Vehicle Collision or Pedestrian Struck (with Injury)"){
+      const markers4 = new google.maps.Marker({
+        map: map,
+        position: { lat: m.X, lng: m.Y },
+        icon: Crash,
+      });
+    }
+
+
+    
   })
+
+  
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       const userPosition = {
