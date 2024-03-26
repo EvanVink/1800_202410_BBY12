@@ -1,7 +1,7 @@
 
 // Initialize and add the map
 let map;
-let marker = [];
+
 const firebaseConfig = {
   apiKey: "AIzaSyDL7dJYa3STvWHdN_9PRSPwed8W2r9OnHk",
   authDomain: "fir-8aefb.firebaseapp.com",
@@ -240,7 +240,7 @@ async function initMap() {
     url: "/images/png-transparent-auto-beauty-specialists-car-traffic-collision-computer-icons-car-angle-car-accident-thumbnail.png",
     scaledSize: new google.maps.Size(35, 35)
   }
-  let countBreak = true;
+  
 
   
   // document.getElementById("but1").addEventListener("click", function Break(){
@@ -290,38 +290,220 @@ async function initMap() {
 
       
   // });
+
+  let countBreak1 = 0; // Ensure countBreak is declared outside the event listener
+  let markerArray1 = []; // Create an array to store references to markers
   
-  Markers.forEach(m => {
-    
-    
-    
-
- 
-    if(m.TYPE == "Break and Enter Commercial"){
-      let markers1 = new google.maps.Marker({
-        map: map,
-        position: { lat: m.X, lng: m.Y },
-        icon: breakAndEnter,
+  document.getElementById("but1").addEventListener("click", function myFunction1() {
+      // calling the function to clear the markers
+      clearMarkers1();
+  
+      // add markers
+      Markers.forEach(m => {
+          if (m.TYPE == "Break and Enter Commercial") {
+              let markers1 = new google.maps.Marker({
+                  map: map,
+                  position: { lat: m.X, lng: m.Y },
+                  icon: breakAndEnter,
+              });
+  
+              // Toggle visibility of marker based on countBreak
+              if (countBreak1 % 2 != 0) {
+                  markers1.setMap(null);
+              } else {
+                  markers1.setMap(map);
+              }
+  
+              // Push the marker to the array
+              markerArray1.push(markers1);
+          }
       });
-      
-    }
-    marker.push(markers1);
-    function setMapOn1(map) {
-      for (let i = 0; i < marker.length; i++) {
-        marker[i].setMap(map);
-      }
-    }
+      countBreak1++;
+      console.log(countBreak1);
+  });
+  
+  function clearMarkers1() {
+      // Loop through all markers in markerArray and set their map property to null
+      markerArray1.forEach(markers1 => {
+          markers1.setMap(null);
+      });
+      // Empty the Array
+      markerArray1 = [];
+  }
 
-    document.getElementById("but1").addEventListener("click", function Break(){
-      if(countBreak == false){
-        setMapOn1(null);
-      } else {
-        setMapOn1(map);
-      }
 
-    })
-  })
+  let countBreak2 = 0; // Ensure countBreak is declared outside the event listener
+  let markerArray2 = []; // Create an array to store references to markers
+  
+  document.getElementById("but2").addEventListener("click", function myFunction2() {
+      // calling the function to clear the markers
+      clearMarkers2();
+  
+      // add markers
+      Markers.forEach(m => {
+        if(m.TYPE == "Mischief"){
+          let markers2 = new google.maps.Marker({
+            map: map,
+            position: { lat: m.X, lng: m.Y },
+            icon: Mischief,
+          });
+  
+              // Toggle visibility of marker based on countBreak
+              if (countBreak2 % 2 != 0) {
+                  markers2.setMap(null);
+              } else {
+                  markers2.setMap(map);
+              }
+  
+              // Push the marker to the array
+              markerArray2.push(markers2);
+          }
+      });
+      countBreak2++;
+      console.log(countBreak2);
+  });
+  
+  function clearMarkers2() {
+      // Loop through all markers in markerArray and set their map property to null
+      markerArray2.forEach(marker2 => {
+          marker2.setMap(null);
+      });
+      // Empty the Array
+      markerArray2 = [];
+  }
+
+
+
+
+
+  let countBreak4 = 0; // Ensure countBreak is declared outside the event listener
+  let markerArray4 = []; // Create an array to store references to markers
+  
+  document.getElementById("but4").addEventListener("click", function myFunction4() {
+      // calling the function to clear the markers
+      clearMarkers4();
+  
+      // add markers
+      Markers.forEach(m => {
+        if(m.TYPE == "Other Theft"){
+          let markers4 = new google.maps.Marker({
+            map: map,
+            position: { lat: m.X, lng: m.Y },
+            icon: Theft,
+        });
+        
+  
+              // Toggle visibility of marker based on countBreak
+              if (countBreak4 % 2 != 0) {
+                  markers4.setMap(null);
+              } else {
+                  markers4.setMap(map);
+              }
+  
+              // Push the marker to the array
+              markerArray4.push(markers4);
+          }
+      });
+      countBreak4++;
+      console.log(countBreak4);
+  });
+  
+  function clearMarkers4() {
+      // Loop through all markers in markerArray and set their map property to null
+      markerArray4.forEach(marker4 => {
+          marker4.setMap(null);
+      });
+      // Empty the Array
+      markerArray4 = [];
+  }
+
+
+
+
+
+
+  let countBreak5 = 0; // Ensure countBreak is declared outside the event listener
+  let markerArray5 = []; // Create an array to store references to markers
+  
+  document.getElementById("but5").addEventListener("click", function myFunction5() {
+      // calling the function to clear the markers
+      clearMarkers5();
+  
+      // add markers
+      Markers.forEach(m => {
+        if(m.TYPE == "Vehicle Collision or Pedestrian Struck (with Injury)"){
+          const markers5 = new google.maps.Marker({
+            map: map,
+            position: { lat: m.X, lng: m.Y },
+            icon: Crash,
+        });
+        
+        
+  
+              // Toggle visibility of marker based on countBreak
+              if (countBreak5 % 2 != 0) {
+                  markers5.setMap(null);
+              } else {
+                  markers5.setMap(map);
+              }
+  
+              // Push the marker to the array
+              markerArray5.push(markers5);
+          }
+      });
+      countBreak5++;
+      console.log(countBreak5);
+  });
+  
+  function clearMarkers5() {
+      // Loop through all markers in markerArray and set their map property to null
+      markerArray5.forEach(marker5 => {
+          marker5.setMap(null);
+      });
+      // Empty the Array
+      markerArray5 = [];
+  }
+
+  
+  // close one
+  // document.getElementById("but1").addEventListener("click", function myfuction(){
+
+  //   Markers.forEach(m => {
+    
+    
+    
+
  
+  //     if(m.TYPE == "Break and Enter Commercial"){
+  //       let markers1 = new google.maps.Marker({
+  //         map: map,
+  //         position: { lat: m.X, lng: m.Y },
+  //         icon: breakAndEnter,
+        
+  //       });
+  //       markers1.setMap(map);
+  //       function Break(){
+  //         if(countBreak % 2 == 0){
+  //           markers1.setMap(null);
+  //         } else {
+  //           markers1.setMap(map);
+  //         }
+  //       }
+  //     }
+  //   })
+  //     countBreak++;
+  //     console.log(countBreak);
+  // })
+    
+    // function setMapOn1(map) {
+    //   for (let i = 0; i < Markers.length; i++) {
+    //     Markers[i].setMap(map);
+    //   }
+    // }
+  
+    
+  
+
 
   Markers.forEach(m => {
     
@@ -353,29 +535,29 @@ async function initMap() {
     // })
     
 
-    if(m.TYPE == "Mischief"){
-      const markers2 = new google.maps.Marker({
-        map: map,
-        position: { lat: m.X, lng: m.Y },
-        icon: Mischief,
-      });
-    }
+    // if(m.TYPE == "Mischief"){
+    //   const markers2 = new google.maps.Marker({
+    //     map: map,
+    //     position: { lat: m.X, lng: m.Y },
+    //     icon: Mischief,
+    //   });
+    // }
 
-    if(m.TYPE == "Other Theft"){
-      const markers3 = new google.maps.Marker({
-        map: map,
-        position: { lat: m.X, lng: m.Y },
-        icon: Theft,
-      });
-    }
+    // if(m.TYPE == "Other Theft"){
+    //   const markers3 = new google.maps.Marker({
+    //     map: map,
+    //     position: { lat: m.X, lng: m.Y },
+    //     icon: Theft,
+    //   });
+    // }
 
-    if(m.TYPE == "Vehicle Collision or Pedestrian Struck (with Injury)"){
-      const markers4 = new google.maps.Marker({
-        map: map,
-        position: { lat: m.X, lng: m.Y },
-        icon: Crash,
-      });
-    }
+    // if(m.TYPE == "Vehicle Collision or Pedestrian Struck (with Injury)"){
+    //   const markers4 = new google.maps.Marker({
+    //     map: map,
+    //     position: { lat: m.X, lng: m.Y },
+    //     icon: Crash,
+    //   });
+    // }
 
 
     
