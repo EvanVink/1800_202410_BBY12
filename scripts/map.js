@@ -505,7 +505,7 @@ async function initMap() {
   
 
 
-  Markers.forEach(m => {
+  // Markers.forEach(m => {
     
     
     
@@ -561,7 +561,7 @@ async function initMap() {
 
 
     
-  })
+  // })
 
   
   if (navigator.geolocation) {
