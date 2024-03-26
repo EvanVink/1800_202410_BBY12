@@ -291,8 +291,8 @@ async function initMap() {
       
   // });
 
-  let countBreak1 = 0; // Ensure countBreak is declared outside the event listener
-  let markerArray1 = []; // Create an array to store references to markers
+  let countBreak1 = 0; //counter
+  let markerArray1 = []; //Array
   
   document.getElementById("but1").addEventListener("click", function myFunction1() {
       // calling the function to clear the markers
@@ -323,7 +323,7 @@ async function initMap() {
   });
   
   function clearMarkers1() {
-      // Loop through all markers in markerArray and set their map property to null
+      // Loop through all markers in Array and set their map property to null
       markerArray1.forEach(markers1 => {
           markers1.setMap(null);
       });
@@ -332,8 +332,8 @@ async function initMap() {
   }
 
 
-  let countBreak2 = 0; // Ensure countBreak is declared outside the event listener
-  let markerArray2 = []; // Create an array to store references to markers
+  let countBreak2 = 0; 
+  let markerArray2 = []; 
   
   document.getElementById("but2").addEventListener("click", function myFunction2() {
       // calling the function to clear the markers
@@ -364,7 +364,7 @@ async function initMap() {
   });
   
   function clearMarkers2() {
-      // Loop through all markers in markerArray and set their map property to null
+      // Loop through all markers in Array and set their map property to null
       markerArray2.forEach(marker2 => {
           marker2.setMap(null);
       });
@@ -376,8 +376,8 @@ async function initMap() {
 
 
 
-  let countBreak4 = 0; // Ensure countBreak is declared outside the event listener
-  let markerArray4 = []; // Create an array to store references to markers
+  let countBreak4 = 0; 
+  let markerArray4 = []; 
   
   document.getElementById("but4").addEventListener("click", function myFunction4() {
       // calling the function to clear the markers
@@ -409,7 +409,7 @@ async function initMap() {
   });
   
   function clearMarkers4() {
-      // Loop through all markers in markerArray and set their map property to null
+      // Loop through all markers in Array and set their map property to null
       markerArray4.forEach(marker4 => {
           marker4.setMap(null);
       });
@@ -422,8 +422,8 @@ async function initMap() {
 
 
 
-  let countBreak5 = 0; // Ensure countBreak is declared outside the event listener
-  let markerArray5 = []; // Create an array to store references to markers
+  let countBreak5 = 0; 
+  let markerArray5 = []; 
   
   document.getElementById("but5").addEventListener("click", function myFunction5() {
       // calling the function to clear the markers
@@ -456,7 +456,7 @@ async function initMap() {
   });
   
   function clearMarkers5() {
-      // Loop through all markers in markerArray and set their map property to null
+      // Loop through all markers in Array and set their map property to null
       markerArray5.forEach(marker5 => {
           marker5.setMap(null);
       });
