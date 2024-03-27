@@ -31,17 +31,17 @@ const staticNewsData = {
 
 
 
-document.getElementById('map-button').addEventListener('click', function() {
-    window.location.href = "map.html";
-});
+// document.getElementById('map-button').addEventListener('click', function() {
+//     window.location.href = "map.html";
+// });
 
-document.getElementById('news-button').addEventListener('click', function() {
-    window.location.href = "news.html";
-});
+// document.getElementById('news-button').addEventListener('click', function() {
+//     window.location.href = "news.html";
+// });
 
-document.getElementById('social-button').addEventListener('click', function() {
-    window.location.href = "socials.html";
-});
+// document.getElementById('social-button').addEventListener('click', function() {
+//     window.location.href = "socials.html";
+// });
 
 
 async function fetchCrimeNews() {
@@ -105,18 +105,17 @@ function displayNewsByCategory(category) {
     });
 }
 
-document.getElementById('nearbyNewsBtn').addEventListener('click', function() {
-    displayNewsByCategory('nearby');
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('overlay').style.display = "none";
+})
+
+document.getElementById("addUser").addEventListener('click', function() {
+    document.getElementById('overlay').style.display = "block";
 });
 
-document.getElementById('countryNewsBtn').addEventListener('click', function() {
-    displayNewsByCategory('country');
+document.getElementById("closeOverlayBtn").addEventListener('click', function() {
+    document.getElementById('overlay').style.display = "none";
 });
-
-document.getElementById('globalNewsBtn').addEventListener('click', function() {
-    displayNewsByCategory('global');
-});
-
 
 
 

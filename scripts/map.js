@@ -1,5 +1,4 @@
 
-// Initialize and add the map
 let map;
 
 const firebaseConfig = {
@@ -54,7 +53,6 @@ async function addCrimeToFirestore(crimeData) {
   await yearCollectionRef.doc(`crime${crimeCount + 1}`).set(crimeData);
   console.log(`Crime added for year ${YEAR} - crime${crimeCount + 1}`);
 }
-
 
 async function initMap() {
   let Markers = [
@@ -563,6 +561,7 @@ async function initMap() {
   // })
 
   
+  
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       const userPosition = {
@@ -571,6 +570,7 @@ async function initMap() {
       };
 
       const userMarker = new google.maps.Marker({
+        enableHighAccuracy: true,
         position: userPosition,
         map: map,
         title: 'Your Location',
@@ -585,6 +585,11 @@ async function initMap() {
       map.setCenter(userPosition);
       navigator.geolocation.watchPosition(updateMarkerRotation);
 
+      document.querySelector('.centerbutton').addEventListener('click', function() {
+        map.setCenter(userPosition);
+        map.setZoom(18);
+      })
+
     }, function() {
       alert('Error: The Geolocation service failed.');
     });
@@ -595,37 +600,25 @@ async function initMap() {
 }
 
 function updateMarkerRotation(position) {
-  // Calculate the movement direction based on the change in coordinates
   if (position.coords.speed > 0) {
-      console.log('You are moving!');
-      const heading = position.coords.heading; // Get the direction of movement in degrees
-      // Update marker icon with rotation
-      marker.setIcon({
-          url: 'path/to/your/marker.png', // Path to your marker icon
-          scaledSize: new google.maps.Size(32, 32), // Set the size of the icon
-          rotation: heading, // Set rotation angle to movement direction
-      });
+    console.log('You are moving!');
+    const heading = position.coords.heading; // Get the direction of movement in degrees
+    const userMarker = map.getMarkers().find(marker => marker.getTitle() === 'Your Location'); // Find the user marker
+    if (userMarker) {
+      userMarker.setRotation(heading); // Set rotation angle to movement direction
+    } 
   }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const bcitMarker = new google.maps.Marker({
+//   position: { lat: 49.247940, lng: -123.002280 },
+//   map: map, // Assuming 'map' is your Google Maps object
+//   title: '1712 midterm', // Optional: Title for the marker
+//   icon: Theft,
+  
+  
+// });
 
 
 
