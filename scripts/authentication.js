@@ -29,7 +29,7 @@ var uiConfig = {
         } else {
             return true;
         }
-            return false;
+          return false;
         },
       uiShown: function() {
         // The widget is rendered.
