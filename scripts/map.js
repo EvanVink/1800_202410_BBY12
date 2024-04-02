@@ -81,7 +81,7 @@ async function initMap() {
       Y: -123.1341078
     },
     {
-      TYPE: "Break and Enter Commercial",
+      TYPE: "Break and Enter Commercial", 
       YEAR: 2024,
       MONTH: 1,
       DAY: 18,
