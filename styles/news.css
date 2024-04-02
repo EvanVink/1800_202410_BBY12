@@ -231,3 +231,12 @@
 #map-button, #news-button, #social-button {
     cursor: pointer;
 }
+
+
+.bg-image {
+    background-image: url('./images/van.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
