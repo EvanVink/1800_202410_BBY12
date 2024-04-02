@@ -64,18 +64,21 @@ const staticNewsData = {
 
 async function fetchCrimeNews() {
     const apiKey = '7c951c50378b4a5bb0bc3697cfec39e5'; // Replace with your actual API key
-    const topics = ['assault', 'robbery', 'homicide', 'theft', 'fraud']; // List of crime-related topics
+    const region = 'Vancouver'; // Define the region to focus on
+    const topics = ['break-in', 'assault', 'theft']; // More specific list of crime-related topics
     const newsContainer = document.querySelector('.cardcontent'); // Target your news container
     newsContainer.innerHTML = ''; // Clear existing content
 
     for (let topic of topics) {
-        const apiUrl = `https://newsapi.org/v2/everything?q=${topic}&apiKey=${apiKey}`;
+        // Add the region to the query to attempt to narrow down the results geographically
+        const apiUrl = `https://newsapi.org/v2/everything?q=${topic}+${region}&apiKey=${apiKey}`;
 
         try {
             const response = await fetch(apiUrl);
             const data = await response.json();
 
-            // Limit the number of articles per topic to prevent one topic dominating the results
+            // You might want to add more sophisticated filtering here, based on your app's logic
+            // to ensure that the articles are indeed related to the desired topics and region
             const articles = data.articles.slice(0, 2); // Adjust number as needed
 
             // Loop through the articles and create a card for each news item
@@ -97,6 +100,7 @@ async function fetchCrimeNews() {
         }
     }
 }
+
 
 // Call the function when the page loads or when needed
 fetchCrimeNews();
