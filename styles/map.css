@@ -3,7 +3,7 @@
 }
 
 #map {
-    height: 630px;
+    height: 690px;
     grid-row: 1/ span 10;
     grid-column: 1/ span 20;
 }

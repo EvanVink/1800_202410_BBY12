@@ -73,3 +73,7 @@
     margin-top:0px;
     transform: rotate(-135deg);
 }
+
+#map-button, #news-button, #social-button {
+    cursor: pointer;
+}

@@ -219,3 +219,7 @@ body{
 .Map:hover{
     transform: scale(0.95);
 }
+
+#map-button, #news-button, #social-button {
+    cursor: pointer;
+}

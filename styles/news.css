@@ -216,5 +216,6 @@
     /* Other styles */
 }
 
-
-
+#map-button, #news-button, #social-button {
+    cursor: pointer;
+}
