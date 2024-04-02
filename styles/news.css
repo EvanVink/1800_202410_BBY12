@@ -1,9 +1,11 @@
+
 .content {
     display: grid;
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(70, 1%);
-    
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto 1fr; /* 1fr for the cardcontent to take remaining space */
+    gap: 10px; /* Add a gap for some breathing room */
 }
+
 
 .searchbar {
     grid-column: 3/ span 6;
@@ -154,12 +156,15 @@
     text-decoration: none; /* Ensures text is not underlined on hover/focus */
 }
 
-/* Button group style */
 .btn-group {
-    text-align: center; /* Center align the button group */
-    display: block; /* Set the group to take full width */
-    margin: 10px 0; /* Spacing above and below the button group */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows the buttons to wrap onto the next line */
+    gap: 10px; /* Adds space between buttons */
+    padding: 15px;
 }
+
 
 /* Ensure the button is not wrapping or overflowing */
 .btn-group .btn {
@@ -171,16 +176,18 @@
 /* Add or adjust these styles in your news.css */
 
 .btn {
-    
-    padding: 0.375rem 0.75rem; /* Adjust padding to ensure text fits within the button */
-    font-size: 1rem; /* Ensure the font size is appropriate for the button size */
-    line-height: 1.0; /* Good for text alignment */
-    border-radius: 0.25rem; /* Optional: Rounds the corners of the buttons */
-    display: inline-block; /* Ensures the buttons are laid out inline and are properly boxed */
-    width: auto; /* Ensures the width of the buttons adjusts based on their content */
-    overflow: hidden; /* Prevents text from spilling out */
-    text-overflow: ellipsis; /* Adds an ellipsis for overflowing text */
-    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    display: flex; /* Flex will allow for better alignment */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    min-width: 90px; /* Set a minimum width */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Prevent content from spilling out */
+    text-overflow: ellipsis; /* Add ellipsis to overflowing content */
 }
 
 .card img {
@@ -197,10 +204,15 @@
     align-items: stretch; /* Stretch items to fill the width of the card */
 }
 
-/* Ensures that the button group doesn't stretch the buttons too much */
 .btn-group {
-    justify-content: center; /* Centers the buttons in the group */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows the buttons to wrap onto the next line */
+    gap: 10px; /* Adds space between buttons */
+    padding: 15px;
 }
+
 
 
 .btn {
