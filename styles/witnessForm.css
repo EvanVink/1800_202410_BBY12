@@ -1,0 +1,274 @@
+.bg-info {
+    background-color: #32746D !important; /* Light green for secondary backgrounds */
+}
+
+body{
+    background-color: #104f55;
+}
+
+
+
+
+.backg {
+
+    grid-column: 3/9;
+    grid-row: 3/9;
+
+}
+
+
+.jumbotron {
+    color:black;
+    grid-column: 1/7;
+    grid-row: 3/7;
+    margin-top: 2%;
+    margin-left: 30px;
+}
+
+.text {
+    opacity: 100%;
+}
+
+.button1{
+    width: 100px;
+
+}
+
+/* General button styles */
+.btn {
+    background-color: #ffffff; /* White background */
+    color: #007bff; /* Blue text - match this with your theme */
+    border: 2px solid #007bff; /* Blue border - match this with your theme */
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    text-align: center; /* Center text inside buttons */
+    font-size: 16px; /* Set the font-size as per your design */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Hover and focus styles for buttons */
+.btn:hover, .btn:focus {
+    color: #ffffff; /* White text on hover/focus */
+    background-color: #007bff; /* Blue background on hover/focus */
+    border-color: #0056b3; /* Slightly darker border on hover/focus for a bit of depth */
+    text-decoration: none; /* Ensures text is not underlined on hover/focus */
+}
+
+/* Ensure the button is not wrapping or overflowing */
+.btn-group .btn {
+    white-space: nowrap; /* Keeps text on one line */
+    overflow: hidden; /* Prevents content from overflowing */
+    text-overflow: ellipsis; /* Adds an ellipsis to overflowing text */
+}
+
+/* Add or adjust these styles in your news.css */
+.btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    display: flex; /* Flex will allow for better alignment */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    min-width: 90px; /* Set a minimum width */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Prevent content from spilling out */
+    text-overflow: ellipsis; /* Add ellipsis to overflowing content */
+}
+
+.btn {
+    margin: 0 10px 5px; /* Adjust the bottom margin as needed, reduced from unspecified to 5px */
+}
+
+
+
+
+
+
+.button1s{
+    grid-column: 1/5;
+    grid-row: 11/13;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.buttonG{
+    grid-column: 2/6;
+    grid-row: 11/13;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.button2{
+    grid-column: 2/7;
+    grid-row: 9/10;
+    width: 100px;
+    
+}
+
+.welcomeG {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(60, 10%);
+    
+}
+
+
+
+.nav-link{
+    color: black;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
+
+
+
+.navbar-light .navbar-brand, .navbar-light .navbar-nav {
+    color: #104f55; /* Dark green for brand name & nav links for visibility */
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
+
+
+#backphoto{
+    background: url('/images/vanbanner.jpg') center center;
+    background-size: cover;
+    grid-column: 1/11;
+    grid-row: 1/21;
+}
+
+
+
+
+
+
+
+.navbar-toggler {
+    width:2%;
+    height:2%;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.toggler-icon {
+    display:block;
+    position: absolute;
+    height:3px;
+    width:100%;
+    background-color: black;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+    outline:none;
+    box-shadow: none;
+    border:0;
+}
+
+.collapsed .top-bar {
+    margin-top: -20px;
+    transform: rotate(0deg);
+}
+.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.collapsed .bottom-bar {
+    margin-top: 20px;
+    transform: rotate(0deg);
+}
+
+
+.top-bar {
+    margin-top: 0px;
+    transform: rotate(135deg);
+}
+
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+.middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.bottom-bar {
+    margin-top:0px;
+    transform: rotate(-135deg);
+}
+
+
+
+
+
+#topTag{
+    grid-row: 22;
+    grid-column: 2/10;
+    color: black;
+}
+
+#maptxt{
+    grid-column: 3/5;
+    grid-row: 23/25;
+    text-align: center;
+    color: black;
+}
+.Map{
+    background: url('/images/eu_van_1.jpg') center center;
+    background-size: cover;
+    grid-column: 2/6;
+    grid-row: 25/37;
+    margin-left: 5%;
+    transition: 0.5s ease-in-out;
+}
+
+.News{
+    background: url('/images/news.jpg') center center;
+    background-size: cover;
+    grid-column: 6/10;
+    grid-row: 25/37;
+    margin-right: 5%;
+    margin-left: 5%;
+    transition: 0.5s ease-in-out;
+}
+
+.Newstxt{
+    grid-column: 7/9;
+    grid-row: 23/25;
+    text-align: center;
+    color: black;
+}
+
+#bottomhr{
+    grid-column: 2/10;
+    grid-row: 40;
+    color: black;
+}
+
+.News:hover{
+    transform: scale(0.95);
+}
+
+.Map:hover{
+    transform: scale(0.95);
+}
+
+#map-button, #news-button, #social-button {
+    cursor: pointer;
+}
