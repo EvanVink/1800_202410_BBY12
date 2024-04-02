@@ -54,7 +54,11 @@ async function addCrimeToFirestore(crimeData) {
   console.log(`Crime added for year ${YEAR} - crime${crimeCount + 1}`);
 }
 
+
+
 async function initMap() {
+
+  
   let Markers = [
     {
       TYPE: "Break and Enter Commercial",
