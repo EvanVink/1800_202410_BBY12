@@ -84,3 +84,52 @@
     margin-top:0px;
     transform: rotate(-135deg);
 }
+
+
+/* General button styles */
+.btn {
+    background-color: #ffffff; /* White background */
+    color: #007bff; /* Blue text - match this with your theme */
+    border: 2px solid #007bff; /* Blue border - match this with your theme */
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    text-align: center; /* Center text inside buttons */
+    font-size: 16px; /* Set the font-size as per your design */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Hover and focus styles for buttons */
+.btn:hover, .btn:focus {
+    color: #ffffff; /* White text on hover/focus */
+    background-color: #007bff; /* Blue background on hover/focus */
+    border-color: #0056b3; /* Slightly darker border on hover/focus for a bit of depth */
+    text-decoration: none; /* Ensures text is not underlined on hover/focus */
+}
+
+/* Ensure the button is not wrapping or overflowing */
+.btn-group .btn {
+    white-space: nowrap; /* Keeps text on one line */
+    overflow: hidden; /* Prevents content from overflowing */
+    text-overflow: ellipsis; /* Adds an ellipsis to overflowing text */
+}
+
+/* Add or adjust these styles in your news.css */
+.btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    display: flex; /* Flex will allow for better alignment */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    min-width: 90px; /* Set a minimum width */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Prevent content from spilling out */
+    text-overflow: ellipsis; /* Add ellipsis to overflowing content */
+}
+
+.btn {
+    margin: 0 10px 5px; /* Adjust the bottom margin as needed, reduced from unspecified to 5px */
+}
