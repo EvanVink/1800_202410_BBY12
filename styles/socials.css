@@ -330,6 +330,7 @@ body{
   
   #searchResults {
     margin: 10px;
+    padding: 5px;  
     height: 150%;
     background-color: rgba(107, 192, 169, 0.411);
   }
@@ -341,5 +342,13 @@ body{
   }
 
   #map-button, #news-button, #social-button {
+    cursor: pointer;
+}
+
+#searchResults p {
+    background-color: white;
+    border-radius: 5px;
+    margin: 3%;
+    padding: 3%;
     cursor: pointer;
 }
