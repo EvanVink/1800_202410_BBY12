@@ -625,17 +625,41 @@ function updateMarkerRotation(position) {
 // });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 initMap();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('overlay').style.display = "none";
+});
+
+document.querySelector(".sosbutton").addEventListener('click', function() {
+  document.getElementById('overlay').style.display = "block";
+});
+
+document.getElementById("closeOverlayBtn").addEventListener('click', function() {
+  document.getElementById('overlay').style.display = "none";
+});
+
+document.getElementById("cancelbutton").addEventListener('click', function() {
+  document.getElementById('overlay').style.display = "none";
+});
+
+function sosButton() {
+  firebase.auth().onAuthStateChanged(user => {
+
+    currentUser = db.collection("users").doc(user.uid);
+
+    document.getElementById('sosconfirm').addEventListener('click', function() {
+      currentUser.update({ sos: true }).then(function() {
+        console.log("sos confirmed!");
+        // After 10 minutes, revert sos field to false
+        setTimeout(function() {
+            currentUser.update({ sos: false });
+        }, 10 * 60 * 1000); // 10 minutes in milliseconds
+      }).catch(function(error) {
+        console.error("Error updating document: ", error);
+      });
+    });
+
+  });
+}
+sosButton();
