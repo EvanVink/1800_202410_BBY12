@@ -1,14 +1,24 @@
-function loadSkeleton() {
 
+  
+
+function loadSkeleton() {
     firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {                   //if the pointer to "user" object is not null, then someone is logged in
-            // User is signed in.
-            // Do something for the user here.
-            console.log($('#navbarPlaceholder').load('./nav-after-login.html'));
+        if (user) {
+            $('#navbarPlaceholder').load('./nav-after-login.html', function() {
+                // Content loaded successfully, now call client.js
+                loadClient();
+            });
         } else {
-            // No user is signed in.
-            console.log($('#navbarPlaceholder').load('./nav-before-login.html'));
+            $('#navbarPlaceholder').load('./nav-before-login.html');
         }
     });
 }
-loadSkeleton(); //
+
+function loadClient() {
+    // Call client.js after the navbar content is fully loaded
+    var script = document.createElement('script');
+    script.src = './scripts/client.js';
+    document.head.appendChild(script);
+}
+
+loadSkeleton();

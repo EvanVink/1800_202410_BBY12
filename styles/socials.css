@@ -68,17 +68,7 @@ body{
 
 
 
-.nav-link{
-    color: black;
-    font-family: "Inria Sans", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 30px;
-}
-
-
-
-.navbar-light .navbar-brand, .navbar-light .navbar-nav {
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
     color: #104f55; /* Dark green for brand name & nav links for visibility */
     font-family: "Inria Sans", sans-serif;
     font-weight: 700;
@@ -300,3 +290,7 @@ body{
     border: solid 1px black;
     border-radius: 3px;
   }
+
+  #map-button, #news-button, #social-button {
+    cursor: pointer;
+}
