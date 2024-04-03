@@ -240,3 +240,21 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+@media screen and (max-width: 710px) {
+    .navbar-brand {
+        width: 30%;
+    }
+    
+  }
+
+  @media screen and (max-width: 623px) {
+
+    
+    .profilecontainer {
+        width: 30%;
+    }
+    .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+  }
