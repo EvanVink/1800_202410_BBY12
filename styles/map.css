@@ -3,7 +3,7 @@
 }
 
 #map {
-    height: 690px;
+    height: 900px;
     grid-row: 1/ span 10;
     grid-column: 1/ span 20;
 }
@@ -467,8 +467,26 @@
         font-size: 20px;
         width: 90%;
     }
+    .navbar-brand {
+        width: 30%;
+    }
     
   }
+
+  @media screen and (max-width: 623px) {
+    #map {
+        height: 855px;
+    }
+
+    
+    .profilecontainer {
+        width: 30%;
+    }
+    .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+  }
+
 
 
   

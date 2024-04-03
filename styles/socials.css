@@ -38,8 +38,6 @@ body{
 /* General button styles */
 .btn {
     background-color: #ffffff; /* White background */
-    color: #007bff; /* Blue text - match this with your theme */
-    border: 2px solid #007bff; /* Blue border - match this with your theme */
     border-radius: 5px; /* Rounded corners for buttons */
     padding: 10px 20px; /* Padding inside buttons */
     text-align: center; /* Center text inside buttons */
@@ -50,9 +48,6 @@ body{
 
 /* Hover and focus styles for buttons */
 .btn:hover, .btn:focus {
-    color: #ffffff; /* White text on hover/focus */
-    background-color: #007bff; /* Blue background on hover/focus */
-    border-color: #0056b3; /* Slightly darker border on hover/focus for a bit of depth */
     text-decoration: none; /* Ensures text is not underlined on hover/focus */
 }
 
