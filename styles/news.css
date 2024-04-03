@@ -241,22 +241,20 @@
     background-attachment: fixed;
 }
 
-
-
-@media screen and (max-width: 870px) {
-    .card{
-        width: 100%;
-
+@media screen and (max-width: 710px) {
+    .navbar-brand {
+        width: 30%;
     }
-        
+    
+  }
 
-    .cardcontent {
-        display: grid;
-        /* Set up a single column layout */
-        grid-template-columns: 1fr;
-        justify-content: center;
-        grid-gap: 10px;
-        width: 100%;
+  @media screen and (max-width: 623px) {
+
+    
+    .profilecontainer {
+        width: 30%;
     }
-}
-
+    .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+  }
