@@ -404,16 +404,18 @@
   }
 
   #overlay p {
+    margin-top: 50px;
     font-size: 26px;
     font-weight: 600;
+    text-align: center;
   }
 
   .buttongroup {
     display: grid; 
-    margin-top: 20%;
+    margin-top: 10%;
     height: 50%;
     grid-template-columns: 50% 50%;
-    padding: 15px;
+    grid-template-rows: 100%;
   }
 
   #cancelbutton {
@@ -421,6 +423,10 @@
     border-color: grey;
     font-weight: 550;
     font-size: 20px;
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 70%;
+    height: 60%;
   }
 
   #sosconfirm {
@@ -428,6 +434,10 @@
     color: red;
     font-weight: 550;
     font-size: 30px;
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 70%;
+    height: 60%;
   }
 
   #cancelbutton:hover {
@@ -441,6 +451,23 @@
   }
   #sosconfirm:active {
     background-color: darkred;
+  }
+
+  
+  @media screen and (max-width: 710px) {
+    #overlay p {
+        
+        font-size: 20px;
+    }
+    #cancelbutton {
+        font-size: 15px;
+        width: 90%;
+    }
+    #sosconfirm {
+        font-size: 20px;
+        width: 90%;
+    }
+    
   }
 
 

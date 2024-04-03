@@ -17,8 +17,13 @@ var uiConfig = {
         //------------------------------------------------------------------------------------------
         var user = authResult.user;                            // get the user object from the Firebase authentication database
         if (authResult.additionalUserInfo.isNewUser) {         //if new user
+
+          const displayName = user.displayName.split(' ').map(namePart => {
+            return namePart.charAt(0).toUpperCase() + namePart.slice(1);
+          }).join(' ');
+
             db.collection("users").doc(user.uid).set({         //write to firestore. We are using the UID for the ID in users collection
-                   name: user.displayName,                    //"users" collection
+                   name: displayName,                    //"users" collection
                    email: user.email,
                    friends: [],
                    sos: false 
