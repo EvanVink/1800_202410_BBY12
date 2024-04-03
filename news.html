@@ -83,6 +83,17 @@
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-dark btn-light" type="submit">Search</button>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="newsPeriodDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select News Period
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="newsPeriodDropdown">
+                    <li><a class="dropdown-item" href="#" data-period="today">Today</a></li>
+                    <li><a class="dropdown-item" href="#" data-period="week">This Week</a></li>
+                    <li><a class="dropdown-item" href="#" data-period="month">This Month</a></li>
+                  </ul>
+                </div>
+                
 
               </form>
         </div>
@@ -97,7 +108,7 @@
 
           <hr id="newsLine">
 
-
+        
 
           <div class="cardcontent">
           <div class="card" style="width: 25%; aspect-ratio: 3/4;">
@@ -137,3 +148,4 @@
         <script src="./scripts/news.js"></script>
     </body>
 </html>
+
