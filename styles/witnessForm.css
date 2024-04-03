@@ -272,3 +272,86 @@ body{
 #map-button, #news-button, #social-button {
     cursor: pointer;
 }
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 700px) {
+    .container {
+      padding: 10px;
+    }
+  }
+
+
+  .backg{
+    background-color: white;
+    grid-column: 3/9;
+    grid-row: 1/15;
+
+
+
+  }
+
+
+  .form-group{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #sub{
+    margin-left: 25px;
+  }
+
+  #headr{
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+
+  .mb-3{
+    margin-left: 25px;
+  }

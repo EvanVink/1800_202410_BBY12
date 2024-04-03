@@ -5,7 +5,44 @@
 body{
     background-color: #104f55;
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  .container {
+    width: 100%;
+    max-width: 700px; 
+    margin: 0 auto; 
+    padding: 20px; 
+  }
+  
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  
+  .content {
+    padding: 10px;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    
+  }
+  
+  
+  @media screen and (max-width: 700px) {
+    .container {
+      padding: 10px; 
+    }
+  }
 
 
 
@@ -233,7 +270,7 @@ body{
     background: url('/images/eu_van_1.jpg') center center;
     background-size: cover;
     grid-column: 2/6;
-    grid-row: 25/37;
+    grid-row: 26/37;
     margin-left: 5%;
     transition: 0.5s ease-in-out;
 }
@@ -242,7 +279,7 @@ body{
     background: url('/images/news.jpg') center center;
     background-size: cover;
     grid-column: 6/10;
-    grid-row: 25/37;
+    grid-row: 26/37;
     margin-right: 5%;
     margin-left: 5%;
     transition: 0.5s ease-in-out;
