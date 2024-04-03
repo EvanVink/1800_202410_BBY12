@@ -379,6 +379,7 @@ body{
     text-align: center;
     background-color:rgb(107, 192, 169);
     transition: background-color .4s ease;
+    cursor: pointer;
 }
 .locbutton:hover {
     background-color:rgb(30, 153, 120)
