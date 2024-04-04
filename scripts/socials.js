@@ -106,3 +106,14 @@ function loadFriends() {
     });
 }
 
+document.getElementById('searchInput').addEventListener("input", e => {
+    const value = e.target.value.toLowerCase();
+    
+    var usernames = document.querySelectorAll('.name');
+
+    usernames.forEach(user => {
+        const userName = user.textContent.toLowerCase();
+        const isVisible = userName.includes(value);
+        user.classList.toggle("hide", !isVisible);
+    });
+});
