@@ -245,6 +245,17 @@
     .navbar-brand {
         width: 30%;
     }
+
+    .cardcontent {
+        display: grid;
+        grid-template-columns: 100;
+        grid-template-rows: auto;
+
+    }
+
+    .card {
+        width: 100%;
+    }
     
   }
 

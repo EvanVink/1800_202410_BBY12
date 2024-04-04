@@ -84,7 +84,7 @@ async function fetchCrimeNews() {
             // Loop through the articles and create a card for each news item
             articles.forEach((article) => {
                 const newsCard = `
-                    <div class="card" style="width: 25%; aspect-ratio: 3/4;">
+                    <div class="card";">
                         <img src="${article.urlToImage}" class="card-img-top" alt="${article.title}">
                         <div class="card-body">
                             <h5 class="card-title">${article.title}</h5>
@@ -151,7 +151,7 @@ function displayNewsByCategory(category) {
     newsItems.forEach((article) => {
         // Since your img tags are already strings, you directly use them instead of parsing
         const newsCard = `
-            <div class="card" style="width: 25%; aspect-ratio: 3/4;">
+            <div class="card";">
                 ${article.img} <!-- Directly use the img string -->
                 <div class="card-body">
                     <h5 class="card-title">${article.title}</h5>
@@ -161,8 +161,9 @@ function displayNewsByCategory(category) {
             </div>
         `;
         newsContainer.innerHTML += newsCard; // Add the card to the container
-    });
-}
+        
+        
+})
 
 
 function getDateRange(period) {
@@ -206,4 +207,5 @@ function mapPeriodToCategory(period) {
         month: 'global'
     };
     return mapping[period] || 'nearby';
+}
 }
