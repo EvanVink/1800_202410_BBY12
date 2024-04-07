@@ -651,10 +651,14 @@ function sosButton() {
     document.getElementById('sosconfirm').addEventListener('click', function() {
       currentUser.update({ sos: true }).then(function() {
         console.log("sos confirmed!");
-        // After 10 minutes, revert sos field to false
+
         setTimeout(function() {
-            currentUser.update({ sos: false });
-        }, 10 * 60 * 1000); // 10 minutes in milliseconds
+            currentUser.update({ sos: false }).then(function() {
+              console.log("sos reverted!");
+            }).catch(function(error) {
+              console.error("Error updating document: ", error);
+            });
+        }, 10 * 60 * 1000); 
       }).catch(function(error) {
         console.error("Error updating document: ", error);
       });
@@ -663,3 +667,4 @@ function sosButton() {
   });
 }
 sosButton();
+

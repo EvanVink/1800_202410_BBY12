@@ -84,14 +84,25 @@ function loadFriends() {
                     const promises = friends.map(friendUid => {
                         return db.collection("users").doc(friendUid).get()
                             .then(friendSnapshot => {
-                                return friendSnapshot.data().name;
+                                const friendData = friendSnapshot.data();
+                                const friendName = friendData.name;
+                                const sos = friendData.sos || false; // Assuming sos is a boolean, defaulting to false if not present
+                                const sosClass = sos ? 'sos-border' : ''; // If sos is true, add the class 'sos-border', otherwise, empty string
+
+                                return { name: friendName, sosClass: sosClass };
                             });
                     });
 
                     Promise.all(promises)
-                        .then(names => {
-                            const listItems = names.map(name => {
-                                return `<li class='friendDisplay'>${name}<div class="locbutton">See Location</div></li>`;
+                        .then(friendsWithClasses => {
+                            const listItems = friendsWithClasses.map(friend => {
+                                let listItem = `<li class='friendDisplay'>${friend.name}`;
+                                if (friend.sosClass === 'sos-border') {
+                                    // If the sosClass is 'sos-border', include the sosnoti div
+                                    listItem += `<div class="sosnoti">SOS</div>`;
+                                }
+                                listItem += `<div class="locbutton">See Location</div></li>`;
+                                return listItem;
                             }).join('');
                             document.querySelector(".list-group").innerHTML = listItems;
                         })
@@ -105,6 +116,7 @@ function loadFriends() {
         }
     });
 }
+
 
 document.getElementById('searchInput').addEventListener("input", e => {
     const value = e.target.value.toLowerCase();
