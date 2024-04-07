@@ -138,9 +138,9 @@
     min-width: 40px;
     max-height: 40px;
     position: absolute;
-    bottom: 32px; /* Adjust as needed for vertical position */
-    left: 12px; /* Adjust as needed for horizontal position */
-    z-index: 1000; /* Ensure the button stays on top of the map */
+    bottom: 32px; 
+    left: 12px; 
+    z-index: 1000; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
 }
@@ -312,52 +312,52 @@
   }
 
 
-  /* General button styles */
+  
 .btn {
-    background-color: #ffffff; /* White background */
-    color: #007bff; /* Blue text - match this with your theme */
-    border: 2px solid #007bff; /* Blue border - match this with your theme */
-    border-radius: 5px; /* Rounded corners for buttons */
-    padding: 10px 20px; /* Padding inside buttons */
-    text-align: center; /* Center text inside buttons */
-    font-size: 16px; /* Set the font-size as per your design */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Smooth transition for hover effects */
+    background-color: #ffffff; 
+    color: #007bff; 
+    border: 2px solid #007bff; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    text-align: center; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; 
 }
 
-/* Hover and focus styles for buttons */
+
 .btn:hover, .btn:focus {
-    color: #ffffff; /* White text on hover/focus */
-    background-color: #007bff; /* Blue background on hover/focus */
-    border-color: #0056b3; /* Slightly darker border on hover/focus for a bit of depth */
-    text-decoration: none; /* Ensures text is not underlined on hover/focus */
+    color: #ffffff; 
+    background-color: #007bff; 
+    border-color: #0056b3; 
+    text-decoration: none; 
 }
 
-/* Ensure the button is not wrapping or overflowing */
+
 .btn-group .btn {
-    white-space: nowrap; /* Keeps text on one line */
-    overflow: hidden; /* Prevents content from overflowing */
-    text-overflow: ellipsis; /* Adds an ellipsis to overflowing text */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
-/* Add or adjust these styles in your news.css */
+
 .btn {
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.25rem;
-    display: flex; /* Flex will allow for better alignment */
-    justify-content: center; /* Center the text horizontally */
-    align-items: center; /* Center the text vertically */
-    min-width: 90px; /* Set a minimum width */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-width: 90px; 
     text-align: center;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Prevent content from spilling out */
-    text-overflow: ellipsis; /* Add ellipsis to overflowing content */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
 .btn {
-    margin: 0 10px 5px; /* Adjust the bottom margin as needed, reduced from unspecified to 5px */
+    margin: 0 10px 5px; 
 }
 
 .overlay {
