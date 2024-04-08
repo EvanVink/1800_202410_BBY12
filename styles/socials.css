@@ -38,8 +38,6 @@ body{
 /* General button styles */
 .btn {
     background-color: #ffffff; /* White background */
-    color: #007bff; /* Blue text - match this with your theme */
-    border: 2px solid #007bff; /* Blue border - match this with your theme */
     border-radius: 5px; /* Rounded corners for buttons */
     padding: 10px 20px; /* Padding inside buttons */
     text-align: center; /* Center text inside buttons */
@@ -50,9 +48,6 @@ body{
 
 /* Hover and focus styles for buttons */
 .btn:hover, .btn:focus {
-    color: #ffffff; /* White text on hover/focus */
-    background-color: #007bff; /* Blue background on hover/focus */
-    border-color: #0056b3; /* Slightly darker border on hover/focus for a bit of depth */
     text-decoration: none; /* Ensures text is not underlined on hover/focus */
 }
 
@@ -260,9 +255,11 @@ body{
 }
 
 #socialtitle {
-    font-size: 22px;
-    font-weight: 600;
-    color: #0a3336;
+    font-size: 30px;
+    font-weight: 650;
+    color: white;
+    border: none;
+    background: none;
 }
 
 .card {
@@ -270,13 +267,10 @@ body{
 }
 
 #addUser {
-    display: inline-flex;
-    justify-content: center;
-    margin-left: 42%;
-    margin-right: 35%;
+    align-items: center;
+    margin: 35%;
     margin-top: 5%;
-    min-width: 15%;
-    white-space: nowrap;
+    min-width: 30%;
     max-width: 20%;
 }
 #plus {
@@ -352,3 +346,85 @@ body{
     padding: 3%;
     cursor: pointer;
 }
+
+.list-group {
+    list-style-type: none;
+    padding: 10px;
+    align-items: center;
+
+}
+.list-group li {
+    float: left;
+    margin: 5px;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 10px;
+    display:grid;
+    grid-template-columns: 50% 20% 30%;
+}
+
+.locbutton {
+    grid-column: 3;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+    text-align: center;
+    background-color:rgb(107, 192, 169);
+    transition: background-color .4s ease;
+    cursor: pointer;
+}
+.locbutton:hover {
+    background-color:rgb(30, 153, 120)
+}
+.locbutton:active {
+    background-color:aqua;
+}
+
+.hide {
+    display: none;
+}
+
+.sosnoti {
+    margin: 8px;
+    border-radius: 8px;
+    border: 3px solid red;
+    text-align: center;
+    color: red;
+    font-weight: 700;
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0% { background-color: rgba(255, 0, 0, 0.728); }
+    80% { background-color: white; }
+    100% { background-color: rgba(255, 0, 0, 0.728); }
+}
+
+@media screen and (max-width: 500px) {
+    .locbutton {
+        font-size: 13px;
+        min-width: 80px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .navbar-brand {
+        width: 30%;
+    }
+    
+  }
+
+  @media screen and (max-width: 623px) {
+
+    
+    .profilecontainer {
+        width: 30%;
+    }
+    .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+  }

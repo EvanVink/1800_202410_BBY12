@@ -115,13 +115,13 @@
 }
 
 .cardcontent {
-    display: flex; /* Use flexbox instead of grid */
-    flex-wrap: wrap; /* Allows items to wrap onto multiple lines as needed */
-    gap: 20px; /* Sets a gap between the cards */
-    justify-content: center; /* Center the cards in the container */
-    align-items: stretch; /* Stretch the items to fill the container */
-    grid-column: 2 / span 8; /* Adjusts the placement in the grid */
-    grid-row: 8 / span 65; /* Adjusts the placement in the grid */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: stretch; 
+    grid-column: 2 / span 8; 
+    grid-row: 8 / span 65; 
 }
 
 .cardcontent > * {
@@ -134,98 +134,98 @@
 
 /* General button styles */
 .btn {
-    background-color: #ffffff; /* White background */
-    color: #007bff; /* Blue text - match this with your theme */
-    border: 2px solid #007bff; /* Blue border - match this with your theme */
-    margin: 0 10px; /* Adds some space between buttons */
-    border-radius: 5px; /* Rounded corners for buttons */
-    padding: 10px 20px; /* Padding inside buttons */
-    text-align: center; /* Center text inside buttons */
-    text-decoration: none; /* Remove underline from links */
-    display: inline-block; /* Allows setting padding and margins */
-    font-size: 16px; /* Set the font-size as per your design */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Smooth transition for hover effects */
+    background-color: #ffffff; 
+    color: #007bff; 
+    border: 2px solid #007bff; 
+    margin: 0 10px; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; 
 }
 
-/* Hover and focus styles for buttons */
+
 .btn:hover, .btn:focus {
-    color: #ffffff; /* White text on hover/focus */
-    background-color: #007bff; /* Blue background on hover/focus */
-    border-color: #0056b3; /* Slightly darker border on hover/focus for a bit of depth */
-    text-decoration: none; /* Ensures text is not underlined on hover/focus */
+    color: #ffffff; 
+    background-color: #007bff; 
+    border-color: #0056b3; 
+    text-decoration: none; 
 }
 
 .btn-group {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allows the buttons to wrap onto the next line */
-    gap: 10px; /* Adds space between buttons */
+    flex-wrap: wrap; 
+    gap: 10px; 
     padding: 15px;
 }
 
 
-/* Ensure the button is not wrapping or overflowing */
+
 .btn-group .btn {
-    white-space: nowrap; /* Keeps text on one line */
-    overflow: hidden; /* Prevents content from overflowing */
-    text-overflow: ellipsis; /* Adds an ellipsis to overflowing text */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
-/* Add or adjust these styles in your news.css */
+
 
 .btn {
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.25rem;
-    display: flex; /* Flex will allow for better alignment */
-    justify-content: center; /* Center the text horizontally */
-    align-items: center; /* Center the text vertically */
-    min-width: 90px; /* Set a minimum width */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-width: 90px; 
     text-align: center;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Prevent content from spilling out */
-    text-overflow: ellipsis; /* Add ellipsis to overflowing content */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
 .card img {
-    width: 100%; /* Makes the image take up 100% of the card width */
-    height: 33%; /* Adjusts the height automatically to maintain aspect ratio */
-    object-fit: cover; /* Covers the area of the card without breaking the aspect ratio */
+    width: 100%; 
+    height: 33%; 
+    object-fit: cover; 
 }
 
 .card {
     
-    flex:  1 calc(25% - 20px); /* Adjust the flex-basis to account for the gap and ensure 4 cards per row */
-    display: flex; /* Use flex display for card */
-    flex-direction: column; /* Stack the image and card body on top of each other */
-    align-items: stretch; /* Stretch items to fill the width of the card */
+    flex:  1 calc(25% - 20px); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: stretch; 
 }
 
 .btn-group {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allows the buttons to wrap onto the next line */
-    gap: 10px; /* Adds space between buttons */
+    flex-wrap: wrap; 
+    gap: 10px; 
     padding: 15px;
 }
 
 
 
 .btn {
-    /* ... other properties ... */
-    min-width: 90px; /* Adjust as needed to fit your design */
-    /* ... other properties ... */
+   
+    min-width: 90px; 
+    
 }
 
 
 .btn {
-    /* Existing styles */
-    margin: 0 10px 5px; /* Adjust the bottom margin as needed, reduced from unspecified to 5px */
-    /* Other styles */
+    
+    margin: 0 10px 5px; 
+    
 }
 
 #map-button, #news-button, #social-button {
@@ -239,4 +239,62 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+@media screen and (max-width: 710px) {
+    .navbar-brand {
+        width: 30%;
+    }
+
+    .cardcontent {
+        display: grid;
+        grid-template-columns: 100;
+        grid-template-rows: auto;
+
+    }
+
+    .card {
+        width: 100%;
+    }
+    
+  }
+
+  @media screen and (max-width: 623px) {
+
+    
+    .profilecontainer {
+        width: 30%;
+    }
+    .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+  }
+
+ 
+.btn {
+    background-color: #ffffff; 
+    color: #007bff; 
+    border: 2px solid #007bff; 
+    margin: 0 10px 5px; 
+    border-radius: 0.25rem; 
+    padding: 10px 20px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-width: 90px; 
+    text-align: center;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s; 
+}
+
+.btn:hover, .btn:focus {
+    color: #ffffff; 
+    background-color: #007bff; 
+    border-color: #0056b3; 
+}
+
+
+.btn-group .btn {
+    max-width: 150px; 
 }

@@ -35,18 +35,17 @@ body{
 }
 
 .button1s{
-    grid-column: 1/5;
+    grid-column: 3/ span 5;
     grid-row: 11/13;
-    margin-left: 30px;
-    margin-top: 10px;
+    margin: 30px;
     
 }
 
 .buttonG{
-    grid-column: 2/6;
+    grid-column: 7/6;
     grid-row: 11/13;
-    margin-left: 30px;
-    margin-top: 10px;
+    margin: 30px;
+
 }
 
 
@@ -220,64 +219,56 @@ body{
     transform: scale(0.95);
 }
 
-/* General button styles */
-/* General button styles */
 .btn {
-    background-color: #ffffff; /* White background */
-    color: #007bff; /* Blue text - match this with your theme */
-    border: 2px solid #007bff; /* Blue border - match this with your theme */
-    border-radius: 5px; /* Rounded corners for buttons */
-    padding: 0.375rem 0.75rem; /* Padding inside buttons */
-    font-size: 1rem; /* Set the font-size as per your design */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Smooth transition for hover effects */
-    display: flex; /* Flex will allow for better alignment */
-    justify-content: center; /* Center the text horizontally */
-    align-items: center; /* Center the text vertically */
-    min-width: 90px; /* Set a minimum width */
+    background-color: #ffffff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 90px;
     text-align: center;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Prevent content from spilling out */
-    text-overflow: ellipsis; /* Add ellipsis to overflowing content */
-    margin: 10px; /* Adjust the margins as needed */
-    position: relative; /* Enable relative positioning */
-    top: -60px; /* Move the button upwards */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px;
+    position: relative;
+    top: -60px;
 }
 
-/* Hover and focus styles for buttons */
 .btn:hover, .btn:focus {
-    color: #ffffff; /* White text on hover/focus */
-    background-color: #007bff; /* Blue background on hover/focus */
-    border-color: #0056b3; /* Slightly darker border on hover/focus for a bit of depth */
-    text-decoration: none; /* Ensures text is not underlined on hover/focus */
+    color: #ffffff;
+    background-color: #007bff;
+    border-color: #0056b3;
+    text-decoration: none;
 }
 
-
-/* Ensure the button is not wrapping or overflowing */
 .btn-group .btn {
-    white-space: nowrap; /* Keeps text on one line */
-    overflow: hidden; /* Prevents content from overflowing */
-    text-overflow: ellipsis; /* Adds an ellipsis to overflowing text */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* Add or adjust these styles in your news.css */
 .btn {
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.25rem;
-    display: flex; /* Flex will allow for better alignment */
-    justify-content: center; /* Center the text horizontally */
-    align-items: center; /* Center the text vertically */
-    min-width: 90px; /* Set a minimum width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 90px;
     text-align: center;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Prevent content from spilling out */
-    text-overflow: ellipsis; /* Add ellipsis to overflowing content */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .btn {
-    margin: 0 10px 5px; /* Adjust the bottom margin as needed, reduced from unspecified to 5px */
+    margin: 0 10px 5px;
 }
-
-

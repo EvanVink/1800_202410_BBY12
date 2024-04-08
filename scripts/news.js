@@ -84,7 +84,7 @@ async function fetchCrimeNews() {
             // Loop through the articles and create a card for each news item
             articles.forEach((article) => {
                 const newsCard = `
-                    <div class="card" style="width: 25%; aspect-ratio: 3/4;">
+                    <div class="card";">
                         <img src="${article.urlToImage}" class="card-img-top" alt="${article.title}">
                         <div class="card-body">
                             <h5 class="card-title">${article.title}</h5>
@@ -151,7 +151,7 @@ function displayNewsByCategory(category) {
     newsItems.forEach((article) => {
         // Since your img tags are already strings, you directly use them instead of parsing
         const newsCard = `
-            <div class="card" style="width: 25%; aspect-ratio: 3/4;">
+            <div class="card";">
                 ${article.img} <!-- Directly use the img string -->
                 <div class="card-body">
                     <h5 class="card-title">${article.title}</h5>
@@ -161,5 +161,51 @@ function displayNewsByCategory(category) {
             </div>
         `;
         newsContainer.innerHTML += newsCard; // Add the card to the container
+        
+        
+})
+
+
+function getDateRange(period) {
+    const now = new Date();
+    let startDate;
+
+    switch (period) {
+        case 'today':
+            startDate = new Date(now.setHours(0, 0, 0, 0));
+            break;
+        case 'week':
+            const firstDayOfWeek = now.getDate() - now.getDay();
+            startDate = new Date(now.setDate(firstDayOfWeek));
+            break;
+        case 'month':
+            startDate = new Date(now.getFullYear(), now.getMonth(), 1);
+            break;
+        default:
+            startDate = new Date();
+    }
+
+    return { startDate: startDate.toISOString().split('T')[0], endDate: now.toISOString().split('T')[0] };
+}
+
+
+
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const period = this.getAttribute('data-period');
+        
+        const category = mapPeriodToCategory(period);
+        displayNewsByCategory(category);
     });
+});
+
+function mapPeriodToCategory(period) {
+    
+    const mapping = {
+        today: 'nearby',
+        week: 'country',
+        month: 'global'
+    };
+    return mapping[period] || 'nearby';
+}
 }

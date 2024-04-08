@@ -46,6 +46,10 @@
                 <img src="./images/809999-200.png" height="55">
                 VanCrimeWatch
             </a>
+            <div class="profilecontainer" style="width: 50%; display: flex; justify-content: right;">
+                <div id="profile" style="font-weight: 500; white-space: nowrap;"></div>
+                <img src="./images/profilepic.png" style="width: 33px; margin-left: 5px; border: 2px solid black; border-radius: 100%; grid-column: 10;">
+            </div>
             <button class="navbar-toggler collapsed d-flex flex-column justify-content-around" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -63,11 +67,14 @@
                         <button class="btn btn-dark" type="submit">Search</button>
                     </form>
                     <li>
-                        <a class="nav-link" href="#">Witness Form</a>
+                        <a class="nav-link" href="./witnessForm.html">Witness Form</a>
                     </li>
                     
                     <li>
                         <a class="nav-link" href="/settings.html">Settings</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/login.html">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -92,25 +99,14 @@
                 <div class="card-header" id="familyHeading">
                     <h5 class="mb-0">
                         <button class="btn btn-block text-left" type="button" id="socialtitle" data-toggle="collapse" data-target="#familyCollapse" aria-expanded="true" aria-controls="familyCollapse">
-                            Socials Tab - Notify Family & Friends
+                            Friends & Family
                         </button>
                     </h5>
                 </div>
 
                 <div id="familyCollapse" class="collapse show" aria-labelledby="familyHeading" data-parent="#familyAccordion">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            Kate <button class="btn btn-danger btn-sm">See Locations</button>
-                        </li>
-                        <li class="list-group-item">
-                            Johnny <button class="btn btn-danger btn-sm">See Locations</button>
-                        </li>
-                        <li class="list-group-item">
-                            Mia <button class="btn btn-danger btn-sm">See Locations</button>
-                        </li>
-                        <li class="list-group-item">
-                            Jennifer <button class="btn btn-danger btn-sm">See Locations</button>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -125,7 +121,7 @@
     <div id="overlay" class="overlay">
         <div class="overlay-content">
           <span class="close" id="closeOverlayBtn">&times;</span>
-          <input type="text" id="searchInput" placeholder="Search for users...">
+          <input type="search" id="searchInput" placeholder="Search for users...">
           <div id="searchResults"></div>
         </div>
       </div>

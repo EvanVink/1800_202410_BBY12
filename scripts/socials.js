@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('overlay').style.display = "none";
+    loadFriends(); 
 });
 
 document.getElementById("addUser").addEventListener('click', function() {
     document.getElementById('overlay').style.display = "block";
+    listenForFriends();
 });
 
 document.getElementById("closeOverlayBtn").addEventListener('click', function() {
@@ -24,15 +26,32 @@ function listenForFriends() {
                 var clickedName = element.textContent.trim();
     
                 // Update the current user's friend array in Firestore
-                var currentUserUid = firebase.auth().currentUser.uid;
-                var userRef = db.collection("users").doc(currentUserUid);
-    
-                userRef.update({
-                    friends: firebase.firestore.FieldValue.arrayUnion(clickedName)
-                }).then(function() {
-                    console.log("Friend added successfully");
-                }).catch(function(error) {
-                    console.error("Error adding friend: ", error);
+                db.collection("users")
+                .where("name", "==", clickedName)
+                .get()
+                .then(function(querySnapshot) {
+                    if (!querySnapshot.empty) {
+                        // Get the document ID (which is essentially the user ID)
+                        var userId = querySnapshot.docs[0].id;
+
+                        // Update the current user's friend array in Firestore
+                        var currentUserUid = firebase.auth().currentUser.uid;
+                        var userRef = db.collection("users").doc(currentUserUid);
+
+                        userRef.update({
+                            friends: firebase.firestore.FieldValue.arrayUnion(userId)
+                        }).then(function() {
+                            console.log("Friend added successfully");
+                        }).catch(function(error) {
+                            console.error("Error adding friend: ", error);
+                        });
+                    } else {
+                        console.log("User not found");
+                    }
+                    loadFriends();
+                })
+                .catch(function(error) {
+                    console.error("Error getting user: ", error);
                 });
             });
         });
@@ -46,7 +65,67 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('searchResults').insertAdjacentHTML('beforeend', `<p class='name'>${doc.data().name} </p>`);
         });
     });
+});
 
-    listenForFriends();
 
+
+
+function loadFriends() {
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            const currentUserUid = user.uid;
+            const currentUserRef = db.collection("users").doc(currentUserUid);
+
+            currentUserRef.get()
+                .then(snapshot => {
+                    const currentUserData = snapshot.data();
+                    const friends = currentUserData.friends || []; // Assuming friends is an array
+                    
+                    const promises = friends.map(friendUid => {
+                        return db.collection("users").doc(friendUid).get()
+                            .then(friendSnapshot => {
+                                const friendData = friendSnapshot.data();
+                                const friendName = friendData.name;
+                                const sos = friendData.sos || false; // Assuming sos is a boolean, defaulting to false if not present
+                                const sosClass = sos ? 'sos-border' : ''; // If sos is true, add the class 'sos-border', otherwise, empty string
+
+                                return { name: friendName, sosClass: sosClass };
+                            });
+                    });
+
+                    Promise.all(promises)
+                        .then(friendsWithClasses => {
+                            const listItems = friendsWithClasses.map(friend => {
+                                let listItem = `<li class='friendDisplay'>${friend.name}`;
+                                if (friend.sosClass === 'sos-border') {
+                                    // If the sosClass is 'sos-border', include the sosnoti div
+                                    listItem += `<div class="sosnoti">SOS</div>`;
+                                }
+                                listItem += `<div class="locbutton">See Location</div></li>`;
+                                return listItem;
+                            }).join('');
+                            document.querySelector(".list-group").innerHTML = listItems;
+                        })
+                        .catch(error => {
+                            console.error("Error fetching friends: ", error);
+                        });
+                })
+                .catch(error => {
+                    console.error("Error fetching current user data: ", error);
+                });
+        }
+    });
+}
+
+
+document.getElementById('searchInput').addEventListener("input", e => {
+    const value = e.target.value.toLowerCase();
+    
+    var usernames = document.querySelectorAll('.name');
+
+    usernames.forEach(user => {
+        const userName = user.textContent.toLowerCase();
+        const isVisible = userName.includes(value);
+        user.classList.toggle("hide", !isVisible);
+    });
 });
