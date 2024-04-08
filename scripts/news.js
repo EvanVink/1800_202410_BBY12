@@ -209,3 +209,8 @@ function mapPeriodToCategory(period) {
     return mapping[period] || 'nearby';
 }
 }
+
+
+
+function addWit()
+
