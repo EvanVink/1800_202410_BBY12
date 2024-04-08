@@ -329,3 +329,18 @@
 .btn-group .btn {
     max-width: 150px; 
 }
+
+
+#headerW{
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+
+#witnessF{
+    background-color: #ffffff;
+    margin-bottom: 23px;
+    display: grid;
+    text-align: center;
+}

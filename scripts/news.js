@@ -209,3 +209,40 @@ function mapPeriodToCategory(period) {
     return mapping[period] || 'nearby';
 }
 }
+
+
+const witnessList = document.querySelector("#witnessF");
+
+// Function to display data from firestore onto the news page
+function displayData(data) {
+  // Clear the existing content of the list
+  witnessList.innerHTML = "";
+
+  // Loop through the data and create list items for each document
+  data.forEach(doc => {
+    const witnessData = doc.data();
+    const listItem = document.createElement("li");
+
+    // Display the witness form data
+    listItem.innerHTML = `
+      <strong>Full Name:</strong> ${witnessData.fullName}<br>
+      <strong>Email:</strong> ${witnessData.email}<br>
+      <strong>Phone:</strong> ${witnessData.phone}<br>
+      <strong>Location:</strong> ${witnessData.location}<br>
+      <strong>Details:</strong> ${witnessData.details}<br>
+      <hr>
+    `;
+    
+ 
+    witnessList.appendChild(listItem);
+  });
+}
+
+// Fetch data from Firestore and call the displayData function
+db.collection("witness").get().then(querySnapshot => {
+  const data = querySnapshot.docs;
+  displayData(data);
+});
+
+
+
