@@ -213,7 +213,7 @@ function mapPeriodToCategory(period) {
 
 const witnessList = document.querySelector("#witnessF");
 
-// Function to display data from Firestore onto the HTML page
+// Function to display data from firestore onto the news page
 function displayData(data) {
   // Clear the existing content of the list
   witnessList.innerHTML = "";
@@ -223,7 +223,7 @@ function displayData(data) {
     const witnessData = doc.data();
     const listItem = document.createElement("li");
 
-    // Display the data in the list item
+    // Display the witness form data
     listItem.innerHTML = `
       <strong>Full Name:</strong> ${witnessData.fullName}<br>
       <strong>Email:</strong> ${witnessData.email}<br>
@@ -233,7 +233,7 @@ function displayData(data) {
       <hr>
     `;
     
-    // Append the list item to the unordered list
+ 
     witnessList.appendChild(listItem);
   });
 }
