@@ -652,12 +652,19 @@ function sosButton() {
       currentUser.update({ sos: true }).then(function() {
         console.log("sos confirmed!");
 
+        // Store SOS confirmation timestamp in session storage
+        sessionStorage.setItem('sosConfirmationTime', new Date().getTime());
+
         setTimeout(function() {
-            currentUser.update({ sos: false }).then(function() {
-              console.log("sos reverted!");
-            }).catch(function(error) {
-              console.error("Error updating document: ", error);
-            });
+            // Check if SOS confirmation timestamp is within 10 minutes
+            const sosConfirmationTime = sessionStorage.getItem('sosConfirmationTime');
+            if (sosConfirmationTime && (new Date().getTime() - parseInt(sosConfirmationTime, 10)) < 10 * 60 * 1000) {
+              currentUser.update({ sos: false }).then(function() {
+                console.log("sos reverted!");
+              }).catch(function(error) {
+                console.error("Error updating document: ", error);
+              });
+            }
         }, 10 * 60 * 1000); 
       }).catch(function(error) {
         console.error("Error updating document: ", error);
@@ -666,5 +673,6 @@ function sosButton() {
 
   });
 }
+
 sosButton();
 
