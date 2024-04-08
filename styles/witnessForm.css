@@ -356,8 +356,6 @@ body, html {
     margin-left: 25px;
   }
 
-<<<<<<< HEAD
-=======
   @media screen and (max-width: 710px) {
     .navbar-brand {
         width: 30%;
@@ -372,7 +370,6 @@ body, html {
         width: 30%;
     }
     .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
-        font-size: 25px;
+        font-size: 21px;
     }
   }
->>>>>>> be87e866851103c476483ec822a62b89ea59e134
