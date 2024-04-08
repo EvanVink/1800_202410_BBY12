@@ -1,6 +1,23 @@
+
+
+let sleep = ms => {  
+  return new Promise(resolve => setTimeout(resolve, ms));  
+  };  
+
+
 document.getElementById('witnessForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-    // Here you can add JavaScript code to handle form submission, like sending data to a server
-    alert('Form submitted!'); // For demonstration purpose only
-    window.location = "./main.html";
+    event.preventDefault(); 
+    Swal.fire({
+      title: "Form Submitted!",
+      text: "Thank You!",
+      icon: "success"
+    }).then(function(){
+      sleep(500).then(() => {
+        window.location = "./main.html";
+      });
+      
+    });
+
+    
+    
   });
