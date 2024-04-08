@@ -658,7 +658,7 @@ function sosButton() {
             }).catch(function(error) {
               console.error("Error updating document: ", error);
             });
-        }, 10 * 1000); 
+        }, 10 * 60 * 1000); 
       }).catch(function(error) {
         console.error("Error updating document: ", error);
       });
