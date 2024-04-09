@@ -73,6 +73,18 @@ async function initMap() {
       Y: -123.1340547
     },
     {
+      TYPE: "Mischief",
+      YEAR: 2024,
+      MONTH: 2,
+      DAY: 11,
+      HOUR: 22,
+      MINUTE: 5,
+      HUNDRED_BLOCK: "10XX BEACH AVE",
+      place: "Central Business District",
+      X: 49.248691,
+      Y: -123.004286
+    },
+    {
       TYPE: "Break and Enter Commercial",
       YEAR: 2024,
       MONTH: 1,
