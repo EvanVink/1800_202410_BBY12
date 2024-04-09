@@ -305,6 +305,36 @@ body{
 .Map:hover{
     transform: scale(0.95);
 }
+.navbar .container {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: 80% 20%;
+    
+}
+.navbar .container > * {
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+}
+.material-icons {
+    font-size: 30px;
+}
+.maplabel {
+    grid-row: 2;
+    grid-column: 1;
+}
+.newslabel {
+    grid-row: 2;
+    grid-column: 2
+}
+.socialslabel {
+    grid-row: 2;
+    grid-column: 3;
+}
+.active {
+    color: green;
+}
 
 #map-button, #news-button, #social-button {
     cursor: pointer;
