@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('overlay').style.display = "none";
+    document.getElementById('location-overlay').style.display = "none";
     loadFriends(); 
 });
 
@@ -11,6 +12,12 @@ document.getElementById("addUser").addEventListener('click', function() {
 document.getElementById("closeOverlayBtn").addEventListener('click', function() {
     document.getElementById('overlay').style.display = "none";
 });
+
+
+
+
+
+
 
 
 
@@ -64,6 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
         allUsers.forEach(doc => {
             document.getElementById('searchResults').insertAdjacentHTML('beforeend', `<p class='name'>${doc.data().name} </p>`);
         });
+
+        
     });
 });
 
@@ -105,6 +114,7 @@ function loadFriends() {
                                 return listItem;
                             }).join('');
                             document.querySelector(".list-group").innerHTML = listItems;
+                            locationOverlay();
                         })
                         .catch(error => {
                             console.error("Error fetching friends: ", error);
@@ -115,6 +125,7 @@ function loadFriends() {
                 });
         }
     });
+    
 }
 
 
@@ -129,3 +140,62 @@ document.getElementById('searchInput').addEventListener("input", e => {
         user.classList.toggle("hide", !isVisible);
     });
 });
+
+function locationOverlay() {
+    document.querySelector('.locbutton').addEventListener('click', function() {
+        document.getElementById('location-overlay').style.display = "block";
+        initMap();
+    });
+    document.getElementById("closeLocationOverlayBtn").addEventListener('click', function() {
+        document.getElementById('location-overlay').style.display = "none";
+    });
+}
+
+async function initMap() {
+      // The location of vancouver
+  const defaultLocation = { lat: 49.2827, lng: -123.1207 };
+  // Request needed libraries.
+  const { Map } = await google.maps.importLibrary("maps");
+  //@ts-ignore
+  const { Marker } = await google.maps.importLibrary("marker");
+
+  const userPosition = {
+    lat: 49.24854943525746,
+    lng: -123.0043539762469
+  };
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 17,
+    center: userPosition,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  new Marker({
+    position: userPosition,
+    map: map,
+    title: "Emma's Position",
+    icon: {
+        url: './images/pointer.png',
+        size: new google.maps.Size(50, 50),
+        scaledSize: new google.maps.Size(50, 50),
+        anchor: new google.maps.Point(25, 25)
+      }
+  });
+
+  const Mischief = {
+    url: "/images/327670-200.png",
+    scaledSize: new google.maps.Size(35, 35)
+  }
+
+  let markers2 = new google.maps.Marker({
+    map: map,
+    position: { lat: 49.248691, lng: -123.004286 },
+    icon: Mischief,
+  });
+
+
+  map.setCenter(userPosition);
+
+}
+initMap();
