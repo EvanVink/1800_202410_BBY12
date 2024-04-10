@@ -14,17 +14,11 @@
     border-radius: 10px;
 }
 
-.d-flex {
-    width: 100%;
-}
 
-.d-flex > * {
-    margin: 5px;
-}
 
 .btn-group {
-    grid-row: 4/ span 3;
-    grid-column: 3/ span 6;
+    grid-row: 4/ span 5;
+    grid-column: 2/ span 10;
     padding: 15px;
 }
 
@@ -134,9 +128,9 @@
 
 /* General button styles */
 .btn {
-    background-color: #ffffff; 
-    color: #007bff; 
-    border: 2px solid #007bff; 
+    background-color: #32746D; 
+    color: white; 
+    border: 2px solid #104f55; 
     margin: 0 10px; 
     border-radius: 5px; 
     padding: 10px 20px; 
@@ -148,13 +142,6 @@
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; 
 }
 
-
-.btn:hover, .btn:focus {
-    color: #ffffff; 
-    background-color: #007bff; 
-    border-color: #0056b3; 
-    text-decoration: none; 
-}
 
 .btn-group {
     display: flex;
@@ -210,7 +197,6 @@
     align-items: center;
     flex-wrap: wrap; 
     gap: 10px; 
-    padding: 15px;
 }
 
 
@@ -222,11 +208,6 @@
 }
 
 
-.btn {
-    
-    margin: 0 10px 5px; 
-    
-}
 
 #map-button, #news-button, #social-button {
     cursor: pointer;
@@ -315,27 +296,11 @@
   }
 
  
-.btn {
-    background-color: #ffffff; 
-    color: #007bff; 
-    border: 2px solid #007bff; 
-    margin: 0 10px 5px; 
-    border-radius: 0.25rem; 
-    padding: 10px 20px; 
-    font-size: 1rem; 
-    cursor: pointer; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    min-width: 90px; 
-    text-align: center;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s; 
-}
 
 .btn:hover, .btn:focus {
     color: #ffffff; 
-    background-color: #007bff; 
-    border-color: #0056b3; 
+    background-color: #32746D; 
+    border-color: #104f55; 
 }
 
 
@@ -360,23 +325,49 @@
 
 
 
-#nearbyNewsBtn{
-    position:absolute;
-    margin-right: 465px;
-    
-}
-
-#countryNewsBtn{
-    position: absolute;
-    margin-right: 150px;
-}
-
-#globalNewsBtn{
-    position: absolute;
-    margin-left: 150px;
-}
 
 .searchbar{
     position: absolute;
     margin-left: 440px;
+}
+
+#newsPeriodDropdown {
+    background-color: #58918b;
+}
+
+@media screen and (max-width: 500px) {
+
+    .btn-group {
+        grid-column: 1/ span 10;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 33.33%);
+        grid-template-rows: 50% 50%;
+    }
+    .dropdown {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+        padding: 0;
+    }
+    #newsPeriodDropdown {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #nearbyNewsBtn {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #countryNewsBtn {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #globalNewsBtn {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
 }
