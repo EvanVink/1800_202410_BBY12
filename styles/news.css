@@ -357,3 +357,26 @@
     display: grid;
     text-align: center;
 }
+
+
+
+#nearbyNewsBtn{
+    position:absolute;
+    margin-right: 465px;
+    
+}
+
+#countryNewsBtn{
+    position: absolute;
+    margin-right: 150px;
+}
+
+#globalNewsBtn{
+    position: absolute;
+    margin-left: 150px;
+}
+
+.searchbar{
+    position: absolute;
+    margin-left: 440px;
+}
