@@ -10,7 +10,7 @@
 }
 
 .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
-    color: #104f55; /* Dark green for brand name & nav links for visibility */
+    color: white; 
     font-family: "Inria Sans", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -87,9 +87,9 @@
 
 
 .btn {
-    background-color: #ffffff;
-    color: #007bff;
-    border: 2px solid #007bff;
+    background-color: #32746D;
+    color: white;
+    border: 2px solid #104f55;
     border-radius: 5px;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -105,13 +105,13 @@
     text-overflow: ellipsis;
     margin: 10px;
     position: relative;
-    top: -60px;
+    top: -20px;
 }
 
 .btn:hover, .btn:focus {
     color: #ffffff;
-    background-color: #007bff;
-    border-color: #0056b3;
+    background-color: #58918b;
+    border-color: rgba(255, 255, 255, 0.292);
     text-decoration: none;
 }
 
@@ -138,4 +138,48 @@
 
 .btn {
     margin: 0 10px 5px;
+}
+
+.navbar {
+    padding: 0%;
+  }
+
+  .navbar .container {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: 80% 20%;
+    padding: 5px;
+    height: 100%;
+    padding-bottom: 18px;
+    
+    
+}
+.navbar .container > * {
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    margin: 0 10px;
+    background-color:#58918b;
+    
+}
+.material-icons {
+    font-size: 30px;
+    border-radius: 24px 24px 0 0;
+}
+.maplabel {
+    grid-row: 2;
+    grid-column: 1;
+    border-radius: 0 0 24px 24px;
+}
+.newslabel {
+    grid-row: 2;
+    grid-column: 2;
+    border-radius: 0 0 24px 24px;
+
+}
+.socialslabel {
+    grid-row: 2;
+    grid-column: 3;
+    border-radius: 0 0 24px 24px;
 }

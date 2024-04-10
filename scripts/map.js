@@ -19,6 +19,11 @@ const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const storage = firebase.storage();
 
+document.querySelectorAll('.desc').forEach(function(element) {
+  element.addEventListener("click", function() {
+    this.classList.toggle("clicked");
+  });
+});
 
 async function uploadCsv() {
   const csvData = await fetch('./crimeData/crimedata.csv')
@@ -307,7 +312,7 @@ async function initMap() {
   let countBreak1 = 0; //counter
   let markerArray1 = []; //Array
   
-  document.getElementById("but1").querySelector('.toggle').addEventListener("click", function myFunction1() {
+  document.getElementById("desc1").addEventListener("click", function myFunction1() {
       // calling the function to clear the markers
       clearMarkers1();
   
@@ -348,7 +353,7 @@ async function initMap() {
   let countBreak2 = 0; 
   let markerArray2 = []; 
   
-  document.getElementById("but2").querySelector('.toggle').addEventListener("click", function myFunction2() {
+  document.getElementById("desc2").addEventListener("click", function myFunction2() {
       // calling the function to clear the markers
       clearMarkers2();
   
@@ -392,7 +397,7 @@ async function initMap() {
   let countBreak4 = 0; 
   let markerArray4 = []; 
   
-  document.getElementById("but4").querySelector('.toggle').addEventListener("click", function myFunction4() {
+  document.getElementById("desc4").addEventListener("click", function myFunction4() {
       // calling the function to clear the markers
       clearMarkers4();
   
@@ -438,7 +443,7 @@ async function initMap() {
   let countBreak5 = 0; 
   let markerArray5 = []; 
   
-  document.getElementById("but5").querySelector('.toggle').addEventListener("click", function myFunction5() {
+  document.getElementById("desc5").addEventListener("click", function myFunction5() {
       // calling the function to clear the markers
       clearMarkers5();
   
