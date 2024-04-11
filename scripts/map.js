@@ -406,7 +406,7 @@ async function initMap() {
   });
 
  
-
+//adding a photo and scaling the markers
   let breakAndEnter = {
     url: "/images/3395132-200.png",
     scaledSize: new google.maps.Size(35, 35)
@@ -429,57 +429,19 @@ async function initMap() {
   
 
   
-  // document.getElementById("but1").addEventListener("click", function Break(){
 
-  //   if ((countBreak % 2) == 0) {
-  //     Markers.forEach(m => {
-  //         if (m.TYPE == "Break and Enter Commercial") {
-  //             markers1 = new google.maps.Marker({
-  //                 map: map,
-  //                 position: { lat: m.X, lng: m.Y },
-  //                 icon: breakAndEnter,
-  //             });
-  //         }
-  //     });
-  // } else {
-  //     Markers.forEach(marker => {
-  //         marker.setMap(null); // Remove the marker from the map
-  //     });
-  // }
-    // if ((countBreak % 2) == 0){
-    //   Markers.forEach(m => {
-
-
-    //     if(m.TYPE == "Break and Enter Commercial"){
-    //       let markers1 = new google.maps.Marker({
-    //         map: map,
-    //         position: { lat: m.X, lng: m.Y },
-    //         icon: breakAndEnter,
-    //       });
-          
-    //     }
-  
-        
-    //   })
-    // } else {
-    //   Markers.forEach(marker => {
-    //     marker.setMap(null); // Remove the marker from the map
-    // });
-        
-        // Markers.setVisible(false); // Remove the marker from the map
-    
-    
-    
-  //   countBreak++;
-  //   console.log(countBreak);
-
-
-      
-  // });
-
+//method to toggle the breaking and entering markers
   let countBreak1 = 0; //counter
   let markerArray1 = []; //Array
   
+  /**
+ * Method for toggling the crash markers.
+ * 
+ * This method toggles the visibility of crash markers on a map. It listens for a click event on an element with id "desc1" and performs the toggling action. It utilizes the Google Maps API to create markers for vehicle collisions or pedestrian strikes with injury and adds them to the map. The markers are added or removed based on the state of a counter variable.
+ * 
+ * @param none
+ * @return void
+ */
   document.getElementById("desc1").addEventListener("click", function myFunction1() {
       // calling the function to clear the markers
       clearMarkers1();
@@ -508,6 +470,14 @@ async function initMap() {
       console.log(countBreak1);
   });
   
+  /**
+ * Clears all markers from the map and resets the marker array.
+ * 
+ * This function iterates through all markers stored in the markerArray1 and sets their map property to null, effectively removing them from the map. After clearing the markers, it empties the markerArray1.
+ * 
+ * @param none
+ * @return void
+ */
   function clearMarkers1() {
       // Loop through all markers in Array and set their map property to null
       markerArray1.forEach(markers1 => {
@@ -517,10 +487,17 @@ async function initMap() {
       markerArray1 = [];
   }
 
-
+//method for toggling the mischief markers
   let countBreak2 = 0; 
   let markerArray2 = []; 
-  
+  /**
+ * Method for toggling the crash markers.
+ * 
+ * This method toggles the visibility of crash markers on a map. It listens for a click event on an element with id "desc2" and performs the toggling action. It utilizes the Google Maps API to create markers for vehicle collisions or pedestrian strikes with injury and adds them to the map. The markers are added or removed based on the state of a counter variable.
+ * 
+ * @param none
+ * @return void
+ */
   document.getElementById("desc2").addEventListener("click", function myFunction2() {
       // calling the function to clear the markers
       clearMarkers2();
@@ -548,7 +525,14 @@ async function initMap() {
       countBreak2++;
       console.log(countBreak2);
   });
-  
+  /**
+ * Clears all markers from the map and resets the marker array.
+ * 
+ * This function iterates through all markers stored in the markerArray2 and sets their map property to null, effectively removing them from the map. After clearing the markers, it empties the markerArray2.
+ * 
+ * @param none
+ * @return void
+ */
   function clearMarkers2() {
       // Loop through all markers in Array and set their map property to null
       markerArray2.forEach(marker2 => {
@@ -561,10 +545,17 @@ async function initMap() {
 
 
 
-
+//method for toggling Other Theft markers
   let countBreak4 = 0; 
   let markerArray4 = []; 
-  
+  /**
+ * Method for toggling the crash markers.
+ * 
+ * This method toggles the visibility of crash markers on a map. It listens for a click event on an element with id "desc4" and performs the toggling action. It utilizes the Google Maps API to create markers for vehicle collisions or pedestrian strikes with injury and adds them to the map. The markers are added or removed based on the state of a counter variable.
+ * 
+ * @param none
+ * @return void
+ */
   document.getElementById("desc4").addEventListener("click", function myFunction4() {
       // calling the function to clear the markers
       clearMarkers4();
@@ -593,7 +584,14 @@ async function initMap() {
       countBreak4++;
       console.log(countBreak4);
   });
-  
+  /**
+ * Clears all markers from the map and resets the marker array.
+ * 
+ * This function iterates through all markers stored in the markerArray4 and sets their map property to null, effectively removing them from the map. After clearing the markers, it empties the markerArray4.
+ * 
+ * @param none
+ * @return void
+ */
   function clearMarkers4() {
       // Loop through all markers in Array and set their map property to null
       markerArray4.forEach(marker4 => {
@@ -607,10 +605,18 @@ async function initMap() {
 
 
 
-
+//method for toggling the crash markers
   let countBreak5 = 0; 
   let markerArray5 = []; 
   
+  /**
+ * Method for toggling the crash markers.
+ * 
+ * This method toggles the visibility of crash markers on a map. It listens for a click event on an element with id "desc5" and performs the toggling action. It utilizes the Google Maps API to create markers for vehicle collisions or pedestrian strikes with injury and adds them to the map. The markers are added or removed based on the state of a counter variable.
+ * 
+ * @param none
+ * @return void
+ */
   document.getElementById("desc5").addEventListener("click", function myFunction5() {
       // calling the function to clear the markers
       clearMarkers5();
@@ -641,6 +647,15 @@ async function initMap() {
       console.log(countBreak5);
   });
   
+
+  /**
+ * Clears all markers from the map and resets the marker array.
+ * 
+ * This function iterates through all markers stored in the markerArray5 and sets their map property to null, effectively removing them from the map. After clearing the markers, it empties the markerArray5.
+ * 
+ * @param none
+ * @return void
+ */
   function clearMarkers5() {
       // Loop through all markers in Array and set their map property to null
       markerArray5.forEach(marker5 => {
@@ -650,104 +665,6 @@ async function initMap() {
       markerArray5 = [];
   }
 
-  
-  // close one
-  // document.getElementById("but1").addEventListener("click", function myfuction(){
-
-  //   Markers.forEach(m => {
-    
-    
-    
-
- 
-  //     if(m.TYPE == "Break and Enter Commercial"){
-  //       let markers1 = new google.maps.Marker({
-  //         map: map,
-  //         position: { lat: m.X, lng: m.Y },
-  //         icon: breakAndEnter,
-        
-  //       });
-  //       markers1.setMap(map);
-  //       function Break(){
-  //         if(countBreak % 2 == 0){
-  //           markers1.setMap(null);
-  //         } else {
-  //           markers1.setMap(map);
-  //         }
-  //       }
-  //     }
-  //   })
-  //     countBreak++;
-  //     console.log(countBreak);
-  // })
-    
-    // function setMapOn1(map) {
-    //   for (let i = 0; i < Markers.length; i++) {
-    //     Markers[i].setMap(map);
-    //   }
-    // }
-  
-    
-  
-
-
-  // Markers.forEach(m => {
-    
-    
-    
-
- 
-    // if(m.TYPE == "Break and Enter Commercial"){
-    //   let markers1 = new google.maps.Marker({
-    //     map: map,
-    //     position: { lat: m.X, lng: m.Y },
-    //     icon: breakAndEnter,
-    //   });
-    //   marker.push(markers1);
-    // }
-    // function setMapOn1(map) {
-    //   for (let i = 0; i < marker.length; i++) {
-    //     marker[i].setMap(map);
-    //   }
-    // }
-
-    // document.getElementById("but1").addEventListener("click", function Break(){
-    //   if(countBreak == false){
-    //     setMapOn1(null);
-    //   } else {
-    //     setMapOn1(map);
-    //   }
-
-    // })
-    
-
-    // if(m.TYPE == "Mischief"){
-    //   const markers2 = new google.maps.Marker({
-    //     map: map,
-    //     position: { lat: m.X, lng: m.Y },
-    //     icon: Mischief,
-    //   });
-    // }
-
-    // if(m.TYPE == "Other Theft"){
-    //   const markers3 = new google.maps.Marker({
-    //     map: map,
-    //     position: { lat: m.X, lng: m.Y },
-    //     icon: Theft,
-    //   });
-    // }
-
-    // if(m.TYPE == "Vehicle Collision or Pedestrian Struck (with Injury)"){
-    //   const markers4 = new google.maps.Marker({
-    //     map: map,
-    //     position: { lat: m.X, lng: m.Y },
-    //     icon: Crash,
-    //   });
-    // }
-
-
-    
-  // })
 
   
   
