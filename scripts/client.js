@@ -2,6 +2,7 @@
     var newsButton = document.getElementById('news-button');
     var socialButton = document.getElementById('social-button');
 
+    //Functionality for the bottom navbar buttons
     if (mapButton) {
         mapButton.addEventListener('click', function() {
             window.location.href = 'map.html';

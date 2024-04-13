@@ -1,6 +1,6 @@
 
   
-
+//Load the user's name on the navbar
 function loadSkeleton() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -25,6 +25,7 @@ function loadSkeleton() {
         }
     });
 }
+
 
 function loadClient() {
     // Call client.js after the navbar content is fully loaded

@@ -1,14 +1,17 @@
+//initially hide the overlays
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('overlay').style.display = "none";
     document.getElementById('location-overlay').style.display = "none";
     loadFriends(); 
 });
 
+//show overlay when addUser is clicked
 document.getElementById("addUser").addEventListener('click', function() {
     document.getElementById('overlay').style.display = "block";
     listenForFriends();
 });
 
+//Close overlay button functionality
 document.getElementById("closeOverlayBtn").addEventListener('click', function() {
     document.getElementById('overlay').style.display = "none";
 });
@@ -64,6 +67,7 @@ function listenForFriends() {
         });
 }
 
+//load user names
 document.addEventListener('DOMContentLoaded', function() {
     
     db.collection("users").get().then(allUsers => {
@@ -78,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+//Load friends on the friends box
 function loadFriends() {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
@@ -95,7 +99,7 @@ function loadFriends() {
                             .then(friendSnapshot => {
                                 const friendData = friendSnapshot.data();
                                 const friendName = friendData.name;
-                                const sos = friendData.sos || false; // Assuming sos is a boolean, defaulting to false if not present
+                                const sos = friendData.sos || false; //defaulting to false if not present
                                 const sosClass = sos ? 'sos-border' : ''; // If sos is true, add the class 'sos-border', otherwise, empty string
 
                                 return { name: friendName, sosClass: sosClass };
@@ -128,7 +132,7 @@ function loadFriends() {
     
 }
 
-
+//Search bar functionality
 document.getElementById('searchInput').addEventListener("input", e => {
     const value = e.target.value.toLowerCase();
     
@@ -141,6 +145,7 @@ document.getElementById('searchInput').addEventListener("input", e => {
     });
 });
 
+//Load the location overlay when button is clicked
 function locationOverlay() {
     document.querySelector('.locbutton').addEventListener('click', function() {
         document.getElementById('location-overlay').style.display = "block";
@@ -151,6 +156,7 @@ function locationOverlay() {
     });
 }
 
+//Initialize the 'get location' map
 async function initMap() {
       // The location of vancouver
   const defaultLocation = { lat: 49.2827, lng: -123.1207 };
@@ -164,7 +170,6 @@ async function initMap() {
     lng: -123.0043539762469
   };
 
-  // The map, centered at Uluru
   map = new Map(document.getElementById("map"), {
     zoom: 17,
     center: userPosition,
