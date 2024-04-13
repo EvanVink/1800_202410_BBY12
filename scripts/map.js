@@ -64,41 +64,7 @@ async function addCrimeToFirestore(crimeData) {
 async function initMap() {
 
   
-  let Markers = [
-    
-   
-      
-  
-    {
-      TYPE: "Vehicle Collision or Pedestrian Struck (with Injury)",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.242951,
-      Y: -123.003331
-    },
-    
-   
-   
-    
-   
-    {
-      TYPE: "Vehicle Collision or Pedestrian Struck (with Injury)",
-      YEAR: 2024,
-      MONTH: 1,
-      DAY: 15,
-      HOUR: 23,
-      MINUTE: 21,
-      HUNDRED_BLOCK: "YUKON ST / W 16TH AVE",
-      place: "Riley Park",
-      X: 49.25681960822756,
-      Y: -123.11318516438216
-    }
-  ]
+
   
   // The location of vancouver
   const defaultLocation = { lat: 49.2827, lng: -123.1207 };
