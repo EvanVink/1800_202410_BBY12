@@ -65,150 +65,10 @@ async function initMap() {
 
   
   let Markers = [
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.27618057,
-      Y: -123.1340547
-    },
-    {
-      TYPE: "Mischief",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.248691,
-      Y: -123.004286
-    },
-    {
-      TYPE: "Mischief",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.245882,
-      Y: -123.003327
-    },
-    {
-      TYPE: "Other Theft",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.248236,
-      Y: -122.996193
-    },
-    {
-      TYPE: "Mischief",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.255759,
-      Y: -123.001790
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.255798,
-      Y: -123.008214
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.251393,
-      Y: -123.014854
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.243724,
-      Y: -123.010855
-    },
-    {
-      TYPE: "Other Theft",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.251504,
-      Y: -122.992445
-    },
-    {
-      TYPE: "Mischief",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.256323,
-      Y: -123.006823
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.252979,
-      Y: -123.015172
-    },
-    {
-      TYPE: "Other Theft",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.240152,
-      Y: -123.004531
-    },
+    
+   
+      
+  
     {
       TYPE: "Vehicle Collision or Pedestrian Struck (with Injury)",
       YEAR: 2024,
@@ -221,162 +81,11 @@ async function initMap() {
       X: 49.242951,
       Y: -123.003331
     },
-    {
-      TYPE: "Mischief",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.238320,
-      Y: -122.993915
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.244617,
-      Y: -122.988914
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 22,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BEACH AVE",
-      place: "Central Business District",
-      X: 49.250880,
-      Y: -122.981973
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 1,
-      DAY: 8,
-      HOUR: 0,
-      MINUTE: 0,
-      HUNDRED_BLOCK: "10XX BROUGHTON ST",
-      place: "West End",
-      X: 49.28521355,
-      Y: -123.1341078
-    },
-    {
-      TYPE: "Break and Enter Commercial", 
-      YEAR: 2024,
-      MONTH: 1,
-      DAY: 18,
-      HOUR: 12,
-      MINUTE: 5,
-      HUNDRED_BLOCK: "10XX BROUGHTON ST",
-      place: "West End",
-      X: 49.28521355,
-      Y: -123.1341078
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 1,
-      DAY: 16,
-      HOUR: 1,
-      MINUTE: 40,
-      HUNDRED_BLOCK: "10XX CANADA PL",
-      place: "Central Business District",
-      X: 49.28877547,
-      Y: -123.1177939
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 11,
-      HOUR: 16,
-      MINUTE: 56,
-      HUNDRED_BLOCK: "10XX HAMILTON ST",
-      place: "Central Business District",
-      X: 49.27602552,
-      Y: -123.121007
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 1,
-      DAY: 4,
-      HOUR: 15,
-      MINUTE: 7,
-      HUNDRED_BLOCK: "10XX HORNBY ST",
-      place: "Central Business District",
-      X: 49.27977166,
-      Y: -123.1260341
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 2,
-      DAY: 14,
-      HOUR: 8,
-      MINUTE: 14,
-      HUNDRED_BLOCK: "10XX HOWE ST",
-      place: "Central Business District",
-      X: 49.27903314,
-      Y: -123.1252581
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 1,
-      DAY: 24,
-      HOUR: 4,
-      MINUTE: 57,
-      HUNDRED_BLOCK: "10XX MARINASIDE CRES",
-      place: "Central Business District",
-      X: 49.27355518,
-      Y: -123.1180272
-    },
-    {
-      TYPE: "Break and Enter Commercial",
-      YEAR: 2024,
-      MONTH: 1,
-      DAY: 26,
-      HOUR: 16,
-      MINUTE: 22,
-      HUNDRED_BLOCK: "10XX MARINASIDE CRES",
-      place: "Central Business District",
-      X: 49.27322235,
-      Y: -123.1162268
-    },
-    {
-      TYPE: "Mischief",
-      YEAR: 2024,
-      MONTH: 1,
-      DAY: 23,
-      HOUR: 4,
-      MINUTE: 28,
-      HUNDRED_BLOCK: "16XX NAPIER ST",
-      place: "Grandview-Woodland",
-      X: 49.274906644241355,
-      Y: -123.0697940868212
-    },
-    {
-      TYPE: "Other Theft",
-      YEAR: 2024,
-      MONTH: 1,
-      DAY: 1,
-      HOUR: 19,
-      MINUTE: 6,
-      HUNDRED_BLOCK: "6XX W BROADWAY AVE",
-      place: "Fairview",
-      X: 49.26329274189404,
-      Y: -123.1175903250156
-    },
+    
+   
+   
+    
+   
     {
       TYPE: "Vehicle Collision or Pedestrian Struck (with Injury)",
       YEAR: 2024,
@@ -423,11 +132,14 @@ async function initMap() {
   }
 
   const Crash = {
-    url: "/images/png-transparent-auto-beauty-specialists-car-traffic-collision-computer-icons-car-angle-car-accident-thumbnail.png",
+    url: "/images/car-crash.png",
     scaledSize: new google.maps.Size(35, 35)
   }
   
-
+  const Ctheft = {
+    url: "/images/car theft.png",
+    scaledSize: new google.maps.Size(35, 35)
+  }
   
 
 //method to toggle the breaking and entering markers
@@ -447,27 +159,30 @@ async function initMap() {
       clearMarkers1();
   
       // add markers
-      Markers.forEach(m => {
-          if (m.TYPE == "Break and Enter Commercial") {
-              let markers1 = new google.maps.Marker({
-                  map: map,
-                  position: { lat: m.X, lng: m.Y },
-                  icon: breakAndEnter
-              });
-  
-              // Toggle visibility of marker based on countBreak
-              if (countBreak1 % 2 != 0) {
-                  markers1.setMap(null);
-              } else {
-                  markers1.setMap(map);
-              }
-  
-              // Push the marker to the array
-              markerArray1.push(markers1);
-          }
+      const crimeRef = db.collection("crime");
+      crimeRef.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            const m = doc.data();
+            if (m.TYPE == "Break and Enter Commercial") {
+                let markers1 = new google.maps.Marker({
+                    map: map,
+                    position: { lat: m.X, lng: m.Y },
+                    icon: breakAndEnter
+                });
+
+                // Toggle visibility of marker based on countBreak
+                if (countBreak1 % 2 == 0) {
+                    markers1.setMap(null);
+                } else {
+                    markers1.setMap(map);
+                }
+
+                // Push the marker to the array
+                markerArray1.push(markers1);
+            }
+        });
       });
       countBreak1++;
-      console.log(countBreak1);
   });
   
   /**
@@ -503,7 +218,10 @@ async function initMap() {
       clearMarkers2();
   
       // add markers
-      Markers.forEach(m => {
+      const crimeRef = db.collection("crime");
+      crimeRef.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            const m = doc.data();
         if(m.TYPE == "Mischief"){
           let markers2 = new google.maps.Marker({
             map: map,
@@ -512,7 +230,7 @@ async function initMap() {
           });
   
               // Toggle visibility of marker based on countBreak
-              if (countBreak2 % 2 != 0) {
+              if (countBreak2 % 2 == 0) {
                   markers2.setMap(null);
               } else {
                   markers2.setMap(map);
@@ -522,8 +240,8 @@ async function initMap() {
               markerArray2.push(markers2);
           }
       });
+    });
       countBreak2++;
-      console.log(countBreak2);
   });
   /**
  * Clears all markers from the map and resets the marker array.
@@ -542,8 +260,68 @@ async function initMap() {
       markerArray2 = [];
   }
 
+//method for toggling the crash markers
+let countBreak3 = 0; 
+let markerArray3 = []; 
+
+/**
+* Method for toggling the crash markers.
+* 
+* This method toggles the visibility of crash markers on a map. It listens for a click event on an element with id "desc5" and performs the toggling action. It utilizes the Google Maps API to create markers for vehicle collisions or pedestrian strikes with injury and adds them to the map. The markers are added or removed based on the state of a counter variable.
+* 
+* @param none
+* @return void
+*/
+document.getElementById("desc3").addEventListener("click", function myFunction3() {
+    // calling the function to clear the markers
+    clearMarkers3();
+
+    // add markers
+    const crimeRef = db.collection("crime");
+    crimeRef.get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          const m = doc.data();
+      if(m.TYPE == "Theft from Vehicle"){
+        const markers3 = new google.maps.Marker({
+          map: map,
+          position: { lat: m.X, lng: m.Y },
+          icon: Ctheft,
+      });
+      
+      
+
+            // Toggle visibility of marker based on countBreak
+            if (countBreak3 % 2 == 0) {
+                markers3.setMap(null);
+            } else {
+                markers3.setMap(map);
+            }
+
+            // Push the marker to the array
+            markerArray3.push(markers3);
+        }
+    });
+  });
+    countBreak3++;
+});
 
 
+  /**
+ * Clears all markers from the map and resets the marker array.
+ * 
+ * This function iterates through all markers stored in the markerArray4 and sets their map property to null, effectively removing them from the map. After clearing the markers, it empties the markerArray4.
+ * 
+ * @param none
+ * @return void
+ */
+  function clearMarkers3() {
+    // Loop through all markers in Array and set their map property to null
+    markerArray3.forEach(marker3 => {
+        marker3.setMap(null);
+    });
+    // Empty the Array
+    markerArray3 = [];
+}
 
 //method for toggling Other Theft markers
   let countBreak4 = 0; 
@@ -561,7 +339,10 @@ async function initMap() {
       clearMarkers4();
   
       // add markers
-      Markers.forEach(m => {
+      const crimeRef = db.collection("crime");
+      crimeRef.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            const m = doc.data();
         if(m.TYPE == "Other Theft"){
           let markers4 = new google.maps.Marker({
             map: map,
@@ -571,7 +352,7 @@ async function initMap() {
         
   
               // Toggle visibility of marker based on countBreak
-              if (countBreak4 % 2 != 0) {
+              if (countBreak4 % 2 == 0) {
                   markers4.setMap(null);
               } else {
                   markers4.setMap(map);
@@ -581,8 +362,8 @@ async function initMap() {
               markerArray4.push(markers4);
           }
       });
+    });
       countBreak4++;
-      console.log(countBreak4);
   });
   /**
  * Clears all markers from the map and resets the marker array.
@@ -622,7 +403,10 @@ async function initMap() {
       clearMarkers5();
   
       // add markers
-      Markers.forEach(m => {
+      const crimeRef = db.collection("crime");
+      crimeRef.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            const m = doc.data();
         if(m.TYPE == "Vehicle Collision or Pedestrian Struck (with Injury)"){
           const markers5 = new google.maps.Marker({
             map: map,
@@ -633,7 +417,7 @@ async function initMap() {
         
   
               // Toggle visibility of marker based on countBreak
-              if (countBreak5 % 2 != 0) {
+              if (countBreak5 % 2 == 0) {
                   markers5.setMap(null);
               } else {
                   markers5.setMap(map);
@@ -643,8 +427,8 @@ async function initMap() {
               markerArray5.push(markers5);
           }
       });
+    });
       countBreak5++;
-      console.log(countBreak5);
   });
   
 
@@ -717,14 +501,6 @@ function updateMarkerRotation(position) {
 }
 
 
-// const bcitMarker = new google.maps.Marker({
-//   position: { lat: 49.247940, lng: -123.002280 },
-//   map: map, // Assuming 'map' is your Google Maps object
-//   title: '1712 midterm', // Optional: Title for the marker
-//   icon: Theft,
-  
-  
-// });
 
 
 initMap();
